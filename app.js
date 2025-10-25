@@ -146,6 +146,22 @@ function renderPinnedSection() {
             colorLevel = risk.level;
         }
 
+        // Determine bar width and labels based on sort mode (same as search results)
+        let barWidth, statsHtml;
+        if (searchSortBy === 'purine') {
+            barWidth = (food.total_purines || 0) / globalMaxPurine * 100;
+            statsHtml = `
+                <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+            `;
+        } else {
+            barWidth = weightedScore / globalMaxRisk * 100;
+            statsHtml = `
+                <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+            `;
+        }
+
         return `
             <div class="food-item pinned-item" onclick="showFoodDetail(${index})">
                 <div class="food-item-header">
@@ -158,11 +174,10 @@ function renderPinnedSection() {
                 </div>
                 <div class="food-item-visual">
                     <div class="mini-bar">
-                        <div class="mini-bar-fill level-${colorLevel}" style="width: ${(food.total_purines || 0) / globalMaxPurine * 100}%"></div>
+                        <div class="mini-bar-fill level-${colorLevel}" style="width: ${barWidth}%"></div>
                     </div>
                     <div class="food-item-stats">
-                        <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
-                        <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                        ${statsHtml}
                     </div>
                 </div>
             </div>
@@ -348,7 +363,10 @@ function handleSearch(query) {
     query = query.toLowerCase().trim();
 
     if (query.length < 2) {
-        document.getElementById('searchResults').innerHTML = '<div class="no-results">Skriv minst 2 tegn for å søke</div>';
+        // Always show pinned foods even when search is empty/too short
+        const pinnedHtml = renderPinnedSection();
+        const messageHtml = '<div class="no-results">Skriv minst 2 tegn for å søke</div>';
+        document.getElementById('searchResults').innerHTML = pinnedHtml + messageHtml;
         return;
     }
 
@@ -361,7 +379,10 @@ function handleSearch(query) {
         );
 
     if (results.length === 0) {
-        document.getElementById('searchResults').innerHTML = '<div class="no-results">Ingen resultater funnet</div>';
+        // Always show pinned foods even when no results found
+        const pinnedHtml = renderPinnedSection();
+        const messageHtml = '<div class="no-results">Ingen resultater funnet</div>';
+        document.getElementById('searchResults').innerHTML = pinnedHtml + messageHtml;
         return;
     }
 
@@ -397,6 +418,24 @@ function handleSearch(query) {
 
             const pinned = isPinned(food.index);
 
+            // Determine bar width and labels based on sort mode
+            let barWidth, statsHtml;
+            if (searchSortBy === 'purine') {
+                // When sorting by purine, show purine bar and emphasize mg/100g
+                barWidth = (food.total_purines || 0) / globalMaxPurine * 100;
+                statsHtml = `
+                    <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                    <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                `;
+            } else {
+                // When sorting by risk, show risk bar and emphasize risiko
+                barWidth = weightedScore / globalMaxRisk * 100;
+                statsHtml = `
+                    <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                    <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                `;
+            }
+
             return `
                 <div class="food-item" onclick="showFoodDetail(${food.index})">
                     <div class="food-item-header">
@@ -409,11 +448,10 @@ function handleSearch(query) {
                     </div>
                     <div class="food-item-visual">
                         <div class="mini-bar">
-                            <div class="mini-bar-fill level-${colorLevel}" style="width: ${(food.total_purines || 0) / globalMaxPurine * 100}%"></div>
+                            <div class="mini-bar-fill level-${colorLevel}" style="width: ${barWidth}%"></div>
                         </div>
                         <div class="food-item-stats">
-                            <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
-                            <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                            ${statsHtml}
                         </div>
                     </div>
                 </div>
