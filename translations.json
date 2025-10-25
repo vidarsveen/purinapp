@@ -1,0 +1,46 @@
+{
+  "no": {
+    "fields": {
+      "name": "Matvare",
+      "preparation": "Tilberedning",
+      "category": "Kategori",
+      "adenine": "Adenin",
+      "guanine": "Guanin",
+      "hypoxanthine": "Hypoxantin",
+      "xanthine": "Xantin",
+      "total_purines": "Totalt purin",
+      "uric_acid": "Urinsyre",
+      "serving": "Porsjon"
+    },
+    "units": {
+      "mg_per_100g": "mg/100g",
+      "grams": "gram",
+      "serving_size": "Porsjonsstørrelse"
+    },
+    "notes": {
+      "purine_values_unit": "Alle purinverdier er oppgitt i mg/100g"
+    }
+  },
+  "en": {
+    "fields": {
+      "name": "Food item",
+      "preparation": "Preparation",
+      "category": "Category",
+      "adenine": "Adenine",
+      "guanine": "Guanine",
+      "hypoxanthine": "Hypoxanthine",
+      "xanthine": "Xanthine",
+      "total_purines": "Total purines",
+      "uric_acid": "Uric acid",
+      "serving": "Serving"
+    },
+    "units": {
+      "mg_per_100g": "mg/100g",
+      "grams": "grams",
+      "serving_size": "Serving size"
+    },
+    "notes": {
+      "purine_values_unit": "All purine values are in mg/100g"
+    }
+  }
+}

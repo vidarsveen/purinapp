@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purin Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        header {
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 18px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn.secondary {
+            background: #f1f5f9;
+            color: #334155;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background: #f8fafc;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #14b8a6;
+            background: white;
+        }
+
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .category-btn {
+            padding: 16px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: center;
+            color: #475569;
+        }
+
+        .category-btn:active {
+            transform: scale(0.97);
+        }
+
+        .category-btn.active {
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .category-btn small {
+            display: block;
+            font-size: 11px;
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+
+        /* Category Switcher - Horizontal scrollable */
+        .category-switcher {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 15px 0;
+            margin-bottom: 15px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .category-switcher::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-chip {
+            padding: 8px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s;
+            color: #64748b;
+        }
+
+        .category-chip.active {
+            background: #14b8a6;
+            color: white;
+            border-color: #14b8a6;
+        }
+
+        /* Food List Item with Visual Bar */
+        .food-item {
+            padding: 16px;
+            border-bottom: 1px solid #f1f5f9;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .food-item:active {
+            background: #f8fafc;
+        }
+
+        .food-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 8px;
+        }
+
+        .food-item-title {
+            flex: 1;
+        }
+
+        .food-item-title h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: #1e293b;
+        }
+
+        .food-item-title p {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .food-item-risk {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .food-item-risk.low { background: #10b981; }
+        .food-item-risk.moderate { background: #f59e0b; }
+        .food-item-risk.high { background: #f97316; }
+        .food-item-risk.very-high { background: #ef4444; }
+
+        .food-item-visual {
+            margin-top: 10px;
+        }
+
+        .mini-bar {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .mini-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .mini-bar-fill.level-low {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+        }
+        .mini-bar-fill.level-moderate {
+            background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+        }
+        .mini-bar-fill.level-high {
+            background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);
+        }
+        .mini-bar-fill.level-very-high {
+            background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
+        }
+
+        .food-item-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .food-item-stats strong {
+            color: #334155;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: #64748b;
+        }
+
+        .toggle-btn.active {
+            background: #14b8a6;
+            color: white;
+            border-color: #14b8a6;
+        }
+
+        /* Food Detail */
+        .food-detail {
+            padding: 20px;
+        }
+
+        .food-header {
+            margin-bottom: 20px;
+        }
+
+        .food-header h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #1e293b;
+        }
+
+        .food-header .meta {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .food-header .serving-info {
+            color: #14b8a6;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .risk-card {
+            padding: 20px;
+            border-radius: 16px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .risk-card.low {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
+        }
+
+        .risk-card.moderate {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+        }
+
+        .risk-card.high {
+            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+            color: #7c2d12;
+        }
+
+        .risk-card.very-high {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            color: #7f1d1d;
+        }
+
+        .risk-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .risk-score {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        .risk-card p {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .metric-card h4 {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .metric-card .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .metric-card .unit {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            color: #1e293b;
+        }
+
+        /* Bar Chart - Improved */
+        .bar-chart {
+            margin: 20px 0;
+        }
+
+        .bar {
+            margin: 16px 0;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 6px;
+            color: #475569;
+        }
+
+        .bar-label .name {
+            font-weight: 600;
+        }
+
+        .bar-label .value {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .bar-container {
+            background: #e2e8f0;
+            height: 32px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 16px;
+            transition: width 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .bar-fill.adenine {
+            background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+        }
+
+        .bar-fill.guanine {
+            background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
+        }
+
+        .bar-fill.hypoxanthine {
+            background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+        }
+
+        .bar-fill.xanthine {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+        }
+
+        .settings-bar {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .settings-bar label {
+            font-size: 12px;
+            color: #64748b;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #94a3b8;
+        }
+
+        .info-box {
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .info-box strong {
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn" id="backBtn" style="display: none;" onclick="goBack()">←</button>
+            <h1 id="headerTitle">Purin Database</h1>
+        </header>
+
+        <div class="content">
+            <!-- Home Screen -->
+            <div id="homeScreen" class="screen active">
+                <button class="btn" onclick="showSearch()">🔍 Søk matvare</button>
+                <button class="btn secondary" onclick="showCategories()">📂 Bla gjennom kategorier</button>
+            </div>
+
+            <!-- Search Screen -->
+            <div id="searchScreen" class="screen">
+                <input type="text" class="search-box" id="searchInput" placeholder="Søk etter matvare..." oninput="handleSearch(this.value)">
+                <div id="searchResults"></div>
+            </div>
+
+            <!-- Categories Screen -->
+            <div id="categoriesScreen" class="screen">
+                <div class="category-grid" id="categoryGrid"></div>
+            </div>
+
+            <!-- Category Foods Screen -->
+            <div id="categoryFoodsScreen" class="screen">
+                <!-- Category Switcher -->
+                <div class="category-switcher" id="categorySwitcher"></div>
+
+                <div class="settings-bar">
+                    <label>Sorter etter:</label>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" onclick="setSortMode('total')">Totalt purin</button>
+                        <button class="toggle-btn" onclick="setSortMode('weighted')">Risiko (vektet)</button>
+                    </div>
+                </div>
+                <div id="categoryFoodsList"></div>
+            </div>
+
+            <!-- Food Detail Screen -->
+            <div id="foodDetailScreen" class="screen"></div>
+        </div>
+    </div>
+
+    <script>
+        let purineData = [];
+        let translations = {};
+        let allCategories = [];
+        let currentCategory = '';
+        let sortMode = 'total';
+        let navigationStack = ['homeScreen'];
+
+        // Load data
+        async function loadData() {
+            try {
+                const [purineResponse, translationsResponse] = await Promise.all([
+                    fetch('purine_data.json'),
+                    fetch('translations.json')
+                ]);
+
+                purineData = await purineResponse.json();
+
+                // Special handling for beer - set serving to 500g
+                purineData = purineData.map(food => {
+                    if (food.name.toLowerCase().includes('øl')) {
+                        return { ...food, serving: 500 };
+                    }
+                    return food;
+                });
+
+                translations = await translationsResponse.json();
+                allCategories = [...new Set(purineData.map(f => f.category))].sort();
+
+                console.log('Data loaded:', purineData.length, 'foods');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Kunne ikke laste data. Vennligst sjekk at JSON-filene finnes.');
+            }
+        }
+
+        // Calculate weighted uricogenic score
+        function calculateWeightedScore(food) {
+            const H = food.hypoxanthine || 0;
+            const A = food.adenine || 0;
+            const G = food.guanine || 0;
+            const X = food.xanthine || 0;
+            return 1.0 * H + 0.6 * A + 0.1 * G + 0.1 * X;
+        }
+
+        // Calculate risk score
+        function calculateRiskScore(weightedScore) {
+            return weightedScore / 300;
+        }
+
+        // Get risk level
+        function getRiskLevel(riskScore) {
+            if (riskScore < 0.2) return { level: 'low', text: 'Lav risiko', desc: 'Trygt ved normalt inntak' };
+            if (riskScore < 0.4) return { level: 'moderate', text: 'Moderat risiko', desc: 'Begrens hyppighet' };
+            if (riskScore < 0.6) return { level: 'high', text: 'Høy risiko', desc: 'Reduser porsjoner' };
+            return { level: 'very-high', text: 'Svært høy risiko', desc: 'Unngå ved urinsyregikt' };
+        }
+
+        // Scale value by serving
+        function scaleByServing(value, serving) {
+            if (!value || !serving) return 0;
+            return (value * serving / 100);
+        }
+
+        // Navigation
+        function showScreen(screenId, addToStack = true) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+
+            if (addToStack) {
+                navigationStack.push(screenId);
+            }
+
+            const isHome = screenId === 'homeScreen';
+            document.getElementById('backBtn').style.display = isHome ? 'none' : 'block';
+        }
+
+        function goBack() {
+            if (navigationStack.length > 1) {
+                navigationStack.pop(); // Remove current screen
+                const previousScreen = navigationStack[navigationStack.length - 1];
+                showScreen(previousScreen, false);
+
+                // Update header title based on screen
+                if (previousScreen === 'homeScreen') {
+                    document.getElementById('headerTitle').textContent = 'Purin Database';
+                } else if (previousScreen === 'searchScreen') {
+                    document.getElementById('headerTitle').textContent = 'Søk matvare';
+                } else if (previousScreen === 'categoriesScreen') {
+                    document.getElementById('headerTitle').textContent = 'Kategorier';
+                } else if (previousScreen === 'categoryFoodsScreen') {
+                    document.getElementById('headerTitle').textContent = currentCategory;
+                }
+            }
+        }
+
+        function showSearch() {
+            showScreen('searchScreen');
+            document.getElementById('headerTitle').textContent = 'Søk matvare';
+            setTimeout(() => {
+                document.getElementById('searchInput').focus();
+            }, 100);
+        }
+
+        function showCategories() {
+            showScreen('categoriesScreen');
+            document.getElementById('headerTitle').textContent = 'Kategorier';
+            renderCategoryGrid();
+        }
+
+        function showCategoryFoods(category) {
+            currentCategory = category;
+            showScreen('categoryFoodsScreen');
+            document.getElementById('headerTitle').textContent = category;
+            renderCategorySwitcher();
+            renderCategoryFoods();
+        }
+
+        function showFoodDetail(index) {
+            showScreen('foodDetailScreen');
+            const food = purineData[index];
+            document.getElementById('headerTitle').textContent = food.name;
+            renderFoodDetail(food);
+        }
+
+        // Render category grid (compact)
+        function renderCategoryGrid() {
+            const html = allCategories.map(cat => {
+                const count = purineData.filter(f => f.category === cat).length;
+                return `
+                    <div class="category-btn" onclick="showCategoryFoods('${cat}')">
+                        ${cat}
+                        <small>${count} matvarer</small>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('categoryGrid').innerHTML = html;
+        }
+
+        // Render category switcher (horizontal scroll)
+        function renderCategorySwitcher() {
+            const html = allCategories.map(cat => `
+                <div class="category-chip ${cat === currentCategory ? 'active' : ''}"
+                     onclick="showCategoryFoods('${cat}')">
+                    ${cat}
+                </div>
+            `).join('');
+            document.getElementById('categorySwitcher').innerHTML = html;
+        }
+
+        // Set sort mode
+        function setSortMode(mode) {
+            sortMode = mode;
+            document.querySelectorAll('#categoryFoodsScreen .toggle-group .toggle-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', (i === 0 && mode === 'total') || (i === 1 && mode === 'weighted'));
+            });
+            renderCategoryFoods();
+        }
+
+        // Render category foods with visual bars - always per 100g
+        function renderCategoryFoods() {
+            let foods = purineData
+                .map((f, i) => ({ ...f, index: i }))
+                .filter(f => f.category === currentCategory);
+
+            // Calculate max value based on sort mode
+            let maxValue;
+            if (sortMode === 'total') {
+                foods.sort((a, b) => (b.total_purines || 0) - (a.total_purines || 0));
+                maxValue = Math.max(...foods.map(f => f.total_purines || 0));
+            } else {
+                foods.sort((a, b) => calculateWeightedScore(b) - calculateWeightedScore(a));
+                maxValue = Math.max(...foods.map(f => calculateWeightedScore(f)));
+            }
+
+            const html = foods.map(food => {
+                const weightedScore = calculateWeightedScore(food);
+                const riskScore = calculateRiskScore(weightedScore);
+                const risk = getRiskLevel(riskScore);
+
+                let barWidth, displayValue, barLevel;
+
+                if (sortMode === 'total') {
+                    // Sorting by total purines
+                    displayValue = `<strong>${(food.total_purines || 0).toFixed(1)}</strong> mg per 100g`;
+                    barWidth = ((food.total_purines || 0) / maxValue * 100);
+                    // Color based on total purine ranges
+                    if (food.total_purines < 50) barLevel = 'low';
+                    else if (food.total_purines < 150) barLevel = 'moderate';
+                    else if (food.total_purines < 200) barLevel = 'high';
+                    else barLevel = 'very-high';
+                } else {
+                    // Sorting by weighted risk
+                    displayValue = `Risiko: <strong>${weightedScore.toFixed(1)}</strong>`;
+                    barWidth = (weightedScore / maxValue * 100);
+                    barLevel = risk.level;
+                }
+
+                return `
+                    <div class="food-item" onclick="showFoodDetail(${food.index})">
+                        <div class="food-item-header">
+                            <div class="food-item-title">
+                                <h3>${food.name}</h3>
+                                <p>${food.preparation}</p>
+                            </div>
+                            <div class="food-item-risk ${risk.level}"></div>
+                        </div>
+                        <div class="food-item-visual">
+                            <div class="mini-bar">
+                                <div class="mini-bar-fill level-${barLevel}" style="width: ${barWidth}%"></div>
+                            </div>
+                            <div class="food-item-stats">
+                                <span>${displayValue}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('categoryFoodsList').innerHTML = html || '<div class="no-results">Ingen matvarer funnet</div>';
+        }
+
+        // Search functionality
+        function handleSearch(query) {
+            query = query.toLowerCase().trim();
+
+            if (query.length < 2) {
+                document.getElementById('searchResults').innerHTML = '<div class="no-results">Skriv minst 2 tegn for å søke</div>';
+                return;
+            }
+
+            const results = purineData
+                .map((f, i) => ({ ...f, index: i }))
+                .filter(f =>
+                    (f.name && f.name.toLowerCase().includes(query)) ||
+                    (f.category && f.category.toLowerCase().includes(query)) ||
+                    (f.preparation && f.preparation.toLowerCase().includes(query))
+                );
+
+            if (results.length === 0) {
+                document.getElementById('searchResults').innerHTML = '<div class="no-results">Ingen resultater funnet</div>';
+                return;
+            }
+
+            const html = results.map(food => {
+                const weightedScore = calculateWeightedScore(food);
+                const riskScore = calculateRiskScore(weightedScore);
+                const risk = getRiskLevel(riskScore);
+
+                return `
+                    <div class="food-item" onclick="showFoodDetail(${food.index})">
+                        <div class="food-item-header">
+                            <div class="food-item-title">
+                                <h3>${food.name}</h3>
+                                <p>${food.preparation} • ${food.category}</p>
+                            </div>
+                            <div class="food-item-risk ${risk.level}"></div>
+                        </div>
+                        <div class="food-item-visual">
+                            <div class="mini-bar">
+                                <div class="mini-bar-fill level-${risk.level}" style="width: ${(food.total_purines || 0) / 300 * 100}%"></div>
+                            </div>
+                            <div class="food-item-stats">
+                                <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                                <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('searchResults').innerHTML = html;
+        }
+
+        // Render food detail - simplified, no duplicate tables
+        function renderFoodDetail(food) {
+            const weightedScore = calculateWeightedScore(food);
+            const riskScore = calculateRiskScore(weightedScore);
+            const risk = getRiskLevel(riskScore);
+
+            // Calculate per serving values
+            const totalPerServing = scaleByServing(food.total_purines, food.serving);
+            const weightedPerServing = scaleByServing(weightedScore, food.serving);
+
+            // Calculate max for bar chart scaling
+            const purineValues = [
+                food.adenine || 0,
+                food.guanine || 0,
+                food.hypoxanthine || 0,
+                food.xanthine || 0
+            ];
+            const maxPurine = Math.max(...purineValues);
+
+            const html = `
+                <div class="food-detail">
+                    <div class="food-header">
+                        <h2>${food.name}</h2>
+                        <p class="meta">${food.preparation} • ${food.category}</p>
+                        <p class="serving-info">📏 Porsjon: ${food.serving} gram</p>
+                    </div>
+
+                    <div class="risk-card ${risk.level}">
+                        <h3>${risk.text}</h3>
+                        <div class="risk-score">${riskScore.toFixed(2)}</div>
+                        <p>${risk.desc}</p>
+                    </div>
+
+                    <div class="section-title">Risiko (vektet score)</div>
+                    <div class="metric-row">
+                        <div class="metric-card">
+                            <h4>Per 100g</h4>
+                            <div class="value">${weightedScore.toFixed(1)}</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Per porsjon (${food.serving}g)</h4>
+                            <div class="value">${weightedPerServing.toFixed(1)}</div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">Totalt purininnhold</div>
+                    <div class="metric-row">
+                        <div class="metric-card">
+                            <h4>Per 100g</h4>
+                            <div class="value">${(food.total_purines || 0).toFixed(1)}</div>
+                            <div class="unit">mg</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Per porsjon (${food.serving}g)</h4>
+                            <div class="value">${totalPerServing.toFixed(1)}</div>
+                            <div class="unit">mg</div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">Purindistribusjon (per 100g)</div>
+                    <div class="bar-chart">
+                        <div class="bar">
+                            <div class="bar-label">
+                                <span class="name">Hypoxantin (vekt: 1.0)</span>
+                                <span class="value">${(food.hypoxanthine || 0).toFixed(1)} mg</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill hypoxanthine" style="width: ${(food.hypoxanthine || 0) / maxPurine * 100}%"></div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-label">
+                                <span class="name">Adenin (vekt: 0.6)</span>
+                                <span class="value">${(food.adenine || 0).toFixed(1)} mg</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill adenine" style="width: ${(food.adenine || 0) / maxPurine * 100}%"></div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-label">
+                                <span class="name">Guanin (vekt: 0.1)</span>
+                                <span class="value">${(food.guanine || 0).toFixed(1)} mg</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill guanine" style="width: ${(food.guanine || 0) / maxPurine * 100}%"></div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-label">
+                                <span class="name">Xantin (vekt: 0.1)</span>
+                                <span class="value">${(food.xanthine || 0).toFixed(1)} mg</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill xanthine" style="width: ${(food.xanthine || 0) / maxPurine * 100}%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>Risiko (vektet):</strong> 1.0 × Hypoxantin + 0.6 × Adenin + 0.1 × Guanin + 0.1 × Xantin<br>
+                        <strong>Risikoscore:</strong> Vektet risiko / 300
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('foodDetailScreen').innerHTML = html;
+        }
+
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
