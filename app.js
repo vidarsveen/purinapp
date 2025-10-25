@@ -8,6 +8,7 @@ let sortMode = 'total';
 let navigationStack = ['homeScreen'];
 let globalMaxPurine = 0;
 let globalMaxRisk = 0;
+let pinnedFoods = []; // Max 5 food indices for comparison
 
 // Load data
 async function loadData() {
@@ -83,6 +84,100 @@ function scaleByServing(value, serving) {
 function capitalizeFirst(str) {
     if (!str) return '';
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Pinning functions for comparison
+function togglePin(foodIndex) {
+    const index = pinnedFoods.indexOf(foodIndex);
+    if (index > -1) {
+        // Already pinned - unpin it
+        pinnedFoods.splice(index, 1);
+    } else {
+        // Not pinned - check if we can add
+        if (pinnedFoods.length >= 5) {
+            alert('Du kan kun sammenligne 5 matvarer om gangen. Fjern en først.');
+            return;
+        }
+        pinnedFoods.push(foodIndex);
+    }
+    // Re-render current view
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput && searchInput.value.trim().length >= 2) {
+        handleSearch(searchInput.value);
+    } else if (currentCategory) {
+        // Re-render category view if we're browsing a category
+        renderCategoryFoods();
+    }
+}
+
+function isPinned(foodIndex) {
+    return pinnedFoods.indexOf(foodIndex) > -1;
+}
+
+function clearAllPins() {
+    pinnedFoods = [];
+    // Re-render current view
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput && searchInput.value.trim().length >= 2) {
+        handleSearch(searchInput.value);
+    } else if (currentCategory) {
+        // Re-render category view if we're browsing a category
+        renderCategoryFoods();
+    }
+}
+
+function renderPinnedSection() {
+    if (pinnedFoods.length === 0) return '';
+
+    const pinnedHtml = pinnedFoods.map(index => {
+        const food = purineData[index];
+        if (!food) return '';
+
+        const weightedScore = calculateWeightedScore(food);
+        const riskScore = calculateRiskScore(weightedScore);
+        const risk = getRiskLevel(riskScore);
+
+        // Get search sort setting for color
+        const searchSortBy = appSettings.getSearchSortBy();
+        let colorLevel;
+        if (searchSortBy === 'purine') {
+            colorLevel = getPurineLevelColor(food.total_purines || 0);
+        } else {
+            colorLevel = risk.level;
+        }
+
+        return `
+            <div class="food-item pinned-item" onclick="showFoodDetail(${index})">
+                <div class="food-item-header">
+                    <div class="food-item-title">
+                        <h3>${food.name}</h3>
+                        <p>${capitalizeFirst(food.preparation)}${food.preparation && food.category ? ' • ' : ''}${food.category}</p>
+                    </div>
+                    <button class="pin-btn pinned" onclick="event.stopPropagation(); togglePin(${index})">📌</button>
+                    <div class="food-item-risk ${colorLevel}"></div>
+                </div>
+                <div class="food-item-visual">
+                    <div class="mini-bar">
+                        <div class="mini-bar-fill level-${colorLevel}" style="width: ${(food.total_purines || 0) / globalMaxPurine * 100}%"></div>
+                    </div>
+                    <div class="food-item-stats">
+                        <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                        <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    return `
+        <div class="pinned-section">
+            <div class="pinned-header">
+                <h3>Sammenlign (${pinnedFoods.length}/5)</h3>
+                <button class="clear-pins-btn" onclick="clearAllPins()">Fjern alle</button>
+            </div>
+            ${pinnedHtml}
+        </div>
+    `;
 }
 
 // Navigation
@@ -221,6 +316,8 @@ function renderCategoryFoods() {
             barLevel = risk.level;
         }
 
+        const pinned = isPinned(food.index);
+
         return `
             <div class="food-item" onclick="showFoodDetail(${food.index})">
                 <div class="food-item-header">
@@ -228,6 +325,7 @@ function renderCategoryFoods() {
                         <h3>${food.name}</h3>
                         <p>${capitalizeFirst(food.preparation)}</p>
                     </div>
+                    <button class="pin-btn ${pinned ? 'pinned' : ''}" onclick="event.stopPropagation(); togglePin(${food.index})">${pinned ? '📌' : '📍'}</button>
                     <div class="food-item-risk ${risk.level}"></div>
                 </div>
                 <div class="food-item-visual">
@@ -280,6 +378,7 @@ function handleSearch(query) {
         : 'Treff sortert etter risiko';
 
     const html = `
+        ${renderPinnedSection()}
         <div class="search-sort-info">${sortInfo}</div>
         ${results.map(food => {
             const weightedScore = calculateWeightedScore(food);
@@ -296,6 +395,8 @@ function handleSearch(query) {
                 colorLevel = risk.level;
             }
 
+            const pinned = isPinned(food.index);
+
             return `
                 <div class="food-item" onclick="showFoodDetail(${food.index})">
                     <div class="food-item-header">
@@ -303,6 +404,7 @@ function handleSearch(query) {
                             <h3>${food.name}</h3>
                             <p>${capitalizeFirst(food.preparation)}${food.preparation && food.category ? ' • ' : ''}${food.category}</p>
                         </div>
+                        <button class="pin-btn ${pinned ? 'pinned' : ''}" onclick="event.stopPropagation(); togglePin(${food.index})">${pinned ? '📌' : '📍'}</button>
                         <div class="food-item-risk ${colorLevel}"></div>
                     </div>
                     <div class="food-item-visual">
