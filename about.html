@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Purin Database</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            color: #1e293b;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about-content h3 {
+            color: #334155;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .about-content p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-content ul, .about-content ol {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .formula-box {
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 4px solid #14b8a6;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .risk-table th,
+        .risk-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .risk-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .risk-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .back-to-app {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+            <h1>Om Purin Database</h1>
+        </header>
+
+        <div class="about-content">
+            <h2>Hva er denne appen?</h2>
+            <p>
+                Purin Database er en mobiloptimalisert app for å søke og bla gjennom purininnhold i matvarer.
+                Appen hjelper personer med urinsyregikt å ta informerte valg om kostholdet sitt.
+            </p>
+
+            <h2>Hvordan beregnes risikoscore?</h2>
+            <p>
+                Ikke alle purinbaser er like farlige. Denne appen bruker en vitenskapelig basert vekting for å
+                beregne den faktiske risikoen:
+            </p>
+
+            <h3>Vektingssystemet</h3>
+            <p>
+                Basert på metabolismestudier har vi funnet at de fire purinbasene har ulik effekt på urinsyrenivået:
+            </p>
+            <ul>
+                <li><span class="highlight">Hypoxantin: 1.0</span> - Høyest risiko, omdannes raskt til urinsyre</li>
+                <li><span class="highlight">Adenin: 0.6</span> - Moderat risiko, krever ekstra omdanningssteg</li>
+                <li><span class="highlight">Guanin: 0.1</span> - Lav risiko, svak effekt på urinsyre</li>
+                <li><span class="highlight">Xantin: 0.1</span> - Lav risiko, nær sluttprodukt</li>
+            </ul>
+
+            <div class="formula-box">
+                Uricogen ekvivalent (U_eq) = 1.0 × Hypoxantin + 0.6 × Adenin + 0.1 × Guanin + 0.1 × Xantin
+                <br><br>
+                Risikoscore = U_eq / 300
+            </div>
+
+            <h3>Fargekodede risikonivåer</h3>
+            <table class="risk-table">
+                <thead>
+                    <tr>
+                        <th>Score</th>
+                        <th>Nivå</th>
+                        <th>Tolkning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 0.2</td>
+                        <td>🟢 Lav risiko</td>
+                        <td>Trygt ved normalt inntak</td>
+                    </tr>
+                    <tr>
+                        <td>0.2–0.4</td>
+                        <td>🟡 Moderat risiko</td>
+                        <td>Begrens hyppighet</td>
+                    </tr>
+                    <tr>
+                        <td>0.4–0.6</td>
+                        <td>🟠 Høy risiko</td>
+                        <td>Reduser porsjoner</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 0.6</td>
+                        <td>🔴 Svært høy risiko</td>
+                        <td>Unngå ved urinsyregikt</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Vitenskapelig grunnlag</h3>
+            <p>
+                Vektingen er basert på flere metabolisme- og ernæringsstudier som viser at hypoxantin
+                gir den største økningen i serumurinsyre, etterfulgt av adenin, mens guanin og xantin
+                har liten eller ingen effekt.
+            </p>
+
+            <h3>Viktige anmerkninger</h3>
+            <ul>
+                <li>Alle verdier er oppgitt per 100g råvare</li>
+                <li>Porsjonsstørrelser er typiske norske porsjoner</li>
+                <li>Øl og drikker måles i 500g (halvliter)</li>
+                <li>Reelle nivåer påvirkes også av alkohol, fruktose og medikamentbruk</li>
+            </ul>
+
+            <h2>Kilder</h2>
+            <ul>
+                <li>Sarwar, G. & Brulé, D. (1991). Assessment of uricogenic potential of purine bases and nucleosides in humans. Advances in Experimental Medicine and Biology, 309, 325–334.</li>
+                <li>Clifford, A. J. et al. (1976). Urinary excretion of purine derivatives in men fed purine bases, nucleosides, and nucleotides. The Journal of Nutrition, 106(3), 435–442.</li>
+                <li>ODS-NIH/USDA Purine Database, Release 2.0 (2024)</li>
+            </ul>
+
+            <a href="index.html" class="back-to-app">← Tilbake til appen</a>
+        </div>
+    </div>
+</body>
+</html>
