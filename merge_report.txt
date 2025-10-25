@@ -1,0 +1,221 @@
+======================================================================
+MERGE REPORT
+======================================================================
+
+CSV entries processed:    90
+Duplicates found:         50
+New entries added:        40
+Total entries in JSON:    381
+
+======================================================================
+DUPLICATES (kept existing JSON data):
+======================================================================
+  CSV: Avokado (total: 18.4)
+  ≈ JSON: Avokado (total: 18.0)
+
+  CSV: Bønnespirer (total: 35.0)
+  ≈ JSON: Bønnespirer, uten bønne (total: 35.0)
+
+  CSV: Brokkoli (total: 70.0)
+  ≈ JSON: Brokkoli (total: 52.0)
+
+  CSV: Brokkolispirer (total: 129.6)
+  ≈ JSON: Brokkolispirer (total: 130.0)
+
+  CSV: Kål (total: 3.2)
+  ≈ JSON: Kål (total: 3.2)
+
+  CSV: Gulrot (total: 2.2)
+  ≈ JSON: Gulrot (total: 2.1)
+
+  CSV: Blomkål (total: 57.2)
+  ≈ JSON: Blomkål (total: 57.0)
+
+  CSV: Kirsebærtomat (total: 3.1)
+  ≈ JSON: Tomat, kirsebær (total: 3.1)
+
+  CSV: Mais (total: 11.7)
+  ≈ JSON: Mais (total: 12.0)
+
+  CSV: Agurk (total: 9.4)
+  ≈ JSON: Agurk (total: 9.4)
+
+  CSV: Aubergine (total: 50.7)
+  ≈ JSON: Aubergine (total: 51.0)
+
+  CSV: Hvitløk (total: 17.0)
+  ≈ JSON: Hvitløk (total: 17.0)
+
+  CSV: Ingefær (total: 2.3)
+  ≈ JSON: Ingefærrot (total: 2.3)
+
+  CSV: Okra (okura) (total: 39.5)
+  ≈ JSON: Okra (total: 40.0)
+
+  CSV: Japansk ingefær (myoga) (total: 7.8)
+  ≈ JSON: Japansk ingefær (myoga) (total: 7.7)
+
+  CSV: Japansk purre (negi) (total: 41.4)
+  ≈ JSON: Japansk purre (negi) (total: 41.0)
+
+  CSV: Japansk gresskar (total: 56.6)
+  ≈ JSON: Gresskar (total: 57.0)
+
+  CSV: Løk (total: 2.3)
+  ≈ JSON: Løk (total: 2.2)
+
+  CSV: Persille (total: 288.9)
+  ≈ JSON: Parsley (total: 289.0)
+
+  CSV: Perillabl ader (shiso) (total: 41.4)
+  ≈ JSON: Perillablader, shiso (total: 42.0)
+
+  CSV: Potet (total: 6.5)
+  ≈ JSON: Potet (total: 6.5)
+
+  CSV: Spinat - Unge blad (total: 171.8)
+  ≈ JSON: Spinach, young (total: 172.0)
+
+  CSV: Spirer (med bønne) (total: 57.3)
+  ≈ JSON: Bønnespirer, med bønne (total: 57.0)
+
+  CSV: Søtpotet (total: 17.0)
+  ≈ JSON: Søtpotet (total: 17.0)
+
+  CSV: Hvit reddikspirer (total: 73.2)
+  ≈ JSON: Reddikspirer, hvit (total: 73.0)
+
+  CSV: Storfekjøtt - Indrefilet (total: 98.4)
+  ≈ JSON: Indrefilet (total: 98.0)
+
+  CSV: Kylling - Bryst (total: 141.2)
+  ≈ JSON: Kyllingkråse (total: 143.0)
+
+  CSV: Kylling - Lår (total: 68.8)
+  ≈ JSON: Kyllinglår (total: 118.0)
+
+  CSV: Kylling - Kråse (total: 142.9)
+  ≈ JSON: Kyllingkråse (total: 143.0)
+
+  CSV: Kylling - Hjerte (total: 125.4)
+  ≈ JSON: Kyllinghjerte (total: 224.0)
+
+  CSV: Kylling - Lår (total: 122.9)
+  ≈ JSON: Kyllinglår (total: 118.0)
+
+  CSV: Kylling - Lever (total: 312.2)
+  ≈ JSON: Kyllinglever (total: 303.0)
+
+  CSV: Kylling - Skinn (total: 119.7)
+  ≈ JSON: Kyllinglår (total: 118.0)
+
+  CSV: Kylling - Vinge (total: 137.5)
+  ≈ JSON: Kyllingkråse (total: 143.0)
+
+  CSV: Fårekjøtt - Fårekjøtt (total: 96.2)
+  ≈ JSON: Fårekjøtt (total: 95.0)
+
+  CSV: Fårekjøtt - Stek (total: 93.5)
+  ≈ JSON: Fårekjøtt (total: 95.0)
+
+  CSV: Svinekjøtt - Hjerte (total: 119.2)
+  ≈ JSON: Svinehjerte (total: 119.0)
+
+  CSV: Svinekjøtt - Nyre (total: 195.0)
+  ≈ JSON: Svinenyre (total: 195.0)
+
+  CSV: Svinekjøtt - Lever (total: 284.8)
+  ≈ JSON: Svinelever (total: 285.0)
+
+  CSV: Svinekjøtt - Nakke (total: 70.5)
+  ≈ JSON: Svinenakke (total: 71.0)
+
+  CSV: Svinekjøtt - Ribbe (total: 75.8)
+  ≈ JSON: Svineribbe (total: 76.0)
+
+  CSV: Svinekjøtt - Indrefilet (total: 119.7)
+  ≈ JSON: Svineindrefilet (total: 120.0)
+
+  CSV: Svinekjøtt - Tunge (total: 104.0)
+  ≈ JSON: Svinetunge (total: 104.0)
+
+  CSV: Bacon (total: 61.8)
+  ≈ JSON: Pork, bacon (total: 62.0)
+
+  CSV: Corned beef (total: 47.0)
+  ≈ JSON: Corned beef (total: 47.0)
+
+  CSV: Frankfurterpølse (total: 49.8)
+  ≈ JSON: Frankfurterpølse (total: 50.0)
+
+  CSV: Leverpostei (total: 80.0)
+  ≈ JSON: Leverpostei (total: 80.0)
+
+  CSV: Prosciutto (Parmaskinke) (total: 138.3)
+  ≈ JSON: Prosciutto (Parmaskinke) (total: 138.0)
+
+  CSV: Salami (total: 120.4)
+  ≈ JSON: Salami (total: 120.0)
+
+  CSV: Wienerpølse (total: 45.5)
+  ≈ JSON: Wienerpølse (total: 46.0)
+
+======================================================================
+NEW ENTRIES ADDED:
+======================================================================
+
+Bearbeidet kjøtt:
+  - Benfri skinke (total: 74.2 mg/100g)
+  - Presseskinke (total: 64.4 mg/100g)
+
+Grønnsaker:
+  - Asparges - Nedre del (total: 10.2 mg/100g)
+  - Asparges - Øvre del (total: 55.3 mg/100g)
+  - Bambusskudd - Nedre del (total: 30.8 mg/100g)
+  - Bambusskudd - Øvre del (total: 63.3 mg/100g)
+  - Bittermelon (goya) (total: 9.9 mg/100g)
+  - Gressløk (nira) (total: 19.4 mg/100g)
+  - Grønn paprika (total: 69.2 mg/100g)
+  - Kinakål (total: 7.0 mg/100g)
+  - Komatsuna - Blad (total: 10.6 mg/100g)
+  - Komatsuna - Unge blad (total: 39.0 mg/100g)
+  - Spinat - Blad (total: 51.4 mg/100g)
+  - Squash (total: 13.1 mg/100g)
+
+Hest:
+  - Hest (total: 113.1 mg/100g)
+
+Hval:
+  - Hval - Halekjøtt (total: 87.6 mg/100g)
+  - Hval - Kjøtt (total: 111.3 mg/100g)
+
+Kylling - Kjøtt:
+  - Kylling - Hvitt kjøtt (total: 153.9 mg/100g)
+
+Okse - Innmat:
+  - Storfekjøtt - Hjerte (total: 185.0 mg/100g)
+  - Storfekjøtt - Lever (total: 219.8 mg/100g)
+  - Storfekjøtt - Nyre (total: 174.2 mg/100g)
+  - Storfekjøtt - Tunge (total: 90.4 mg/100g)
+  - Storfekjøtt - Tykktarm (total: 88.0 mg/100g)
+
+Okse - Kjøtt:
+  - Storfekjøtt - Bov (total: 104.0 mg/100g)
+  - Storfekjøtt - Bryst (total: 79.2 mg/100g)
+  - Storfekjøtt - Legg (total: 106.4 mg/100g)
+  - Storfekjøtt - Mage (total: 83.9 mg/100g)
+  - Storfekjøtt - Nakke (total: 100.6 mg/100g)
+  - Storfekjøtt - Ribbesteik (total: 74.2 mg/100g)
+  - Storfekjøtt - Skulderbryst (total: 90.2 mg/100g)
+  - Storfekjøtt - Skulderkam (total: 77.4 mg/100g)
+  - Storfekjøtt - Ytrefilet (total: 110.8 mg/100g)
+  - Storfekjøtt - Ytrefilet (rå) (total: 135.2 mg/100g)
+  - Storfekjøtt - Ytrefilet (varmebehandlet) (total: 143.5 mg/100g)
+
+Svin - Kjøtt:
+  - Svinekjøtt - Mørbrad (total: 113.0 mg/100g)
+  - Svinekjøtt - Mørbrad (total: 90.9 mg/100g)
+  - Svinekjøtt - Skulder (total: 81.4 mg/100g)
+  - Svinekjøtt - Skulderbryst (total: 95.1 mg/100g)
+  - Svinekjøtt - Skulderkam (total: 90.8 mg/100g)
+  - Svinekjøtt - Skulderknoke (total: 107.6 mg/100g)
