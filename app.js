@@ -65,6 +65,14 @@ function getRiskLevel(riskScore) {
     return { level: 'very-high', text: 'Svært høy risiko', desc: 'Unngå ved urinsyregikt' };
 }
 
+// Get color level based on total purine amount
+function getPurineLevelColor(purinAmount) {
+    if (purinAmount < 50) return 'low';
+    if (purinAmount < 150) return 'moderate';
+    if (purinAmount < 200) return 'high';
+    return 'very-high';
+}
+
 // Scale value by serving
 function scaleByServing(value, serving) {
     if (!value || !serving) return 0;
@@ -278,6 +286,16 @@ function handleSearch(query) {
             const riskScore = calculateRiskScore(weightedScore);
             const risk = getRiskLevel(riskScore);
 
+            // Determine color based on what's being sorted/displayed
+            let colorLevel;
+            if (searchSortBy === 'purine') {
+                // When sorting by purine, color based on purine amount
+                colorLevel = getPurineLevelColor(food.total_purines || 0);
+            } else {
+                // When sorting by risk, color based on risk level
+                colorLevel = risk.level;
+            }
+
             return `
                 <div class="food-item" onclick="showFoodDetail(${food.index})">
                     <div class="food-item-header">
@@ -285,11 +303,11 @@ function handleSearch(query) {
                             <h3>${food.name}</h3>
                             <p>${capitalizeFirst(food.preparation)}${food.preparation && food.category ? ' • ' : ''}${food.category}</p>
                         </div>
-                        <div class="food-item-risk ${risk.level}"></div>
+                        <div class="food-item-risk ${colorLevel}"></div>
                     </div>
                     <div class="food-item-visual">
                         <div class="mini-bar">
-                            <div class="mini-bar-fill level-${risk.level}" style="width: ${(food.total_purines || 0) / globalMaxPurine * 100}%"></div>
+                            <div class="mini-bar-fill level-${colorLevel}" style="width: ${(food.total_purines || 0) / globalMaxPurine * 100}%"></div>
                         </div>
                         <div class="food-item-stats">
                             <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
