@@ -337,6 +337,9 @@ function renderFoodDetail(food) {
     ];
     const maxPurine = Math.max(...purineValues);
 
+    // Display score based on view mode
+    const displayScore = isServingView ? weightedPerServing : weightedScore;
+
     // Explanation text
     const explanationText = `En porsjon av denne matvaren er typisk ${food.serving} gram. Sammensetningen av de 4 underkategoriene (Hypoxantin, Adenin, Guanin og Xantin) gjør at denne har en vektet risikoscore på ${weightedScore.toFixed(1)}.`;
 
@@ -350,7 +353,7 @@ function renderFoodDetail(food) {
 
             <div class="risk-card ${risk.level}">
                 <h3>${risk.text}</h3>
-                <div class="risk-score">${weightedScore.toFixed(1)}</div>
+                <div class="risk-score">${displayScore.toFixed(1)}</div>
 
                 <!-- Compact purine distribution -->
                 <div class="risk-bars">
