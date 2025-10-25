@@ -350,24 +350,29 @@ function renderFoodDetail(food) {
 
             <div class="risk-card ${risk.level}">
                 <h3>${risk.text}</h3>
-                <div class="risk-score">${riskScore.toFixed(2)}</div>
+                <div class="risk-score">${weightedScore.toFixed(1)}</div>
+
+                <!-- Compact purine distribution -->
+                <div class="risk-bars">
+                    <div class="risk-bar">
+                        <div class="risk-bar-fill hypoxanthine" style="width: ${(food.hypoxanthine || 0) / maxPurine * 100}%"></div>
+                    </div>
+                    <div class="risk-bar">
+                        <div class="risk-bar-fill adenine" style="width: ${(food.adenine || 0) / maxPurine * 100}%"></div>
+                    </div>
+                    <div class="risk-bar">
+                        <div class="risk-bar-fill guanine" style="width: ${(food.guanine || 0) / maxPurine * 100}%"></div>
+                    </div>
+                    <div class="risk-bar">
+                        <div class="risk-bar-fill xanthine" style="width: ${(food.xanthine || 0) / maxPurine * 100}%"></div>
+                    </div>
+                </div>
+
                 <p>${risk.desc}</p>
             </div>
 
             <div class="info-box">
                 ${explanationText}
-            </div>
-
-            <div class="section-title">Risiko (vektet score)</div>
-            <div class="metric-row">
-                <div class="metric-card">
-                    <h4>Per 100g</h4>
-                    <div class="value">${weightedScore.toFixed(1)}</div>
-                </div>
-                <div class="metric-card">
-                    <h4>Per porsjon (${food.serving}g)</h4>
-                    <div class="value">${weightedPerServing.toFixed(1)}</div>
-                </div>
             </div>
 
             <div class="section-title">Totalt purininnhold</div>
@@ -384,7 +389,19 @@ function renderFoodDetail(food) {
                 </div>
             </div>
 
-            <div class="section-title">Purindistribusjon (per 100g)</div>
+            <div class="section-title">Risiko (vektet score)</div>
+            <div class="metric-row">
+                <div class="metric-card">
+                    <h4>Per 100g</h4>
+                    <div class="value">${weightedScore.toFixed(1)}</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Per porsjon (${food.serving}g)</h4>
+                    <div class="value">${weightedPerServing.toFixed(1)}</div>
+                </div>
+            </div>
+
+            <div class="section-title">Relativ Purindistribusjon (per 100g)</div>
             <div class="bar-chart">
                 <div class="bar">
                     <div class="bar-label">
