@@ -22,3 +22,11 @@ nul
 
 # CSV files (keep only JSON)
 *.csv
+
+# Documentation files (keep locally)
+*.pdf
+screenshots/
+
+# Backup files
+*.backup
+*.backup2
