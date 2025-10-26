@@ -19,6 +19,7 @@
             <div id="homeScreen" class="screen active">
                 <button class="btn" onclick="showSearch()">🔍 Søk matvare</button>
                 <button class="btn secondary" onclick="showCategories()">📂 Bla gjennom kategorier</button>
+                <button class="btn secondary" onclick="window.location.href='diet.html'">📖 Kostholdsråd</button>
                 <button class="btn secondary" onclick="showAboutPage()">ℹ️ Om denne appen</button>
             </div>
 
@@ -73,19 +74,75 @@
             </div>
             <div class="modal-body">
                 <div class="setting-group">
-                    <label class="setting-label">Detaljvisning - standard visning</label>
-                    <p class="setting-description">Velg om verdier skal vises per porsjon eller per 100g</p>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="detailViewServing" name="detailView" value="serving" checked>
-                            <label for="detailViewServing">Per porsjon</label>
+                    <label class="setting-label">Fargekoding - Per 100g</label>
+                    <p class="setting-description">Grenseverdier for purininnhold per 100 gram</p>
+
+                    <div class="threshold-inputs">
+                        <div class="threshold-input-group">
+                            <label for="per100g_threshold1">🟢 Lav → 🟡 Moderat:</label>
+                            <input type="number" id="per100g_threshold1" value="50" min="0" max="500" step="10">
+                            <span>mg</span>
                         </div>
-                        <div class="radio-option">
-                            <input type="radio" id="detailViewPer100g" name="detailView" value="per100g">
-                            <label for="detailViewPer100g">Per 100g</label>
+                        <div class="threshold-input-group">
+                            <label for="per100g_threshold2">🟡 Moderat → 🟠 Høy:</label>
+                            <input type="number" id="per100g_threshold2" value="150" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                        <div class="threshold-input-group">
+                            <label for="per100g_threshold3">🟠 Høy → 🔴 Svært høy:</label>
+                            <input type="number" id="per100g_threshold3" value="200" min="0" max="500" step="10">
+                            <span>mg</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="setting-group">
+                    <label class="setting-label">Fargekoding - Per porsjon</label>
+                    <p class="setting-description">Grenseverdier for purininnhold per typisk porsjon</p>
+
+                    <div class="threshold-inputs">
+                        <div class="threshold-input-group">
+                            <label for="perServing_threshold1">🟢 Lav → 🟡 Moderat:</label>
+                            <input type="number" id="perServing_threshold1" value="30" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                        <div class="threshold-input-group">
+                            <label for="perServing_threshold2">🟡 Moderat → 🟠 Høy:</label>
+                            <input type="number" id="perServing_threshold2" value="100" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                        <div class="threshold-input-group">
+                            <label for="perServing_threshold3">🟠 Høy → 🔴 Svært høy:</label>
+                            <input type="number" id="perServing_threshold3" value="150" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label">Fargekoding - Risiko (vektet)</label>
+                    <p class="setting-description">Grenseverdier for vektet risikoscore (mg purinekvivalenter)</p>
+
+                    <div class="threshold-inputs">
+                        <div class="threshold-input-group">
+                            <label for="risk_threshold1">🟢 Lav → 🟡 Moderat:</label>
+                            <input type="number" id="risk_threshold1" value="60" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                        <div class="threshold-input-group">
+                            <label for="risk_threshold2">🟡 Moderat → 🟠 Høy:</label>
+                            <input type="number" id="risk_threshold2" value="120" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                        <div class="threshold-input-group">
+                            <label for="risk_threshold3">🟠 Høy → 🔴 Svært høy:</label>
+                            <input type="number" id="risk_threshold3" value="180" min="0" max="500" step="10">
+                            <span>mg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn secondary" onclick="resetThresholds()" style="margin-top: 15px;">Tilbakestill alle til standard</button>
             </div>
         </div>
     </div>

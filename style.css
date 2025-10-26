@@ -585,6 +585,15 @@ header h1 {
     color: #1e293b;
 }
 
+.source-citation {
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+    padding: 12px 0;
+    margin-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
 /* Settings button */
 .settings-btn {
     position: absolute;
@@ -684,6 +693,45 @@ header h1 {
     font-size: 12px;
     color: #64748b;
     margin-bottom: 12px;
+}
+
+.threshold-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.threshold-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.threshold-input-group label {
+    flex: 1;
+    font-size: 13px;
+    color: #475569;
+}
+
+.threshold-input-group input[type="number"] {
+    width: 80px;
+    padding: 8px 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.threshold-input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #14b8a6;
+}
+
+.threshold-input-group span {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
 }
 
 .radio-group {

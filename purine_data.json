@@ -9,7 +9,8 @@
     "xanthine": 15.0,
     "total_purines": 185.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Oksenyre",
@@ -21,7 +22,8 @@
     "xanthine": 35.0,
     "total_purines": 174.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Oksetarm",
@@ -33,7 +35,8 @@
     "xanthine": 7.3,
     "total_purines": 88.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Okselever",
@@ -45,7 +48,8 @@
     "xanthine": 50.0,
     "total_purines": 220.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Oksemage",
@@ -57,7 +61,8 @@
     "xanthine": 17.0,
     "total_purines": 84.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Oksetunge",
@@ -69,7 +74,8 @@
     "xanthine": 9.1,
     "total_purines": 90.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Brisket (bryst)",
@@ -81,7 +87,8 @@
     "xanthine": 9.1,
     "total_purines": 79.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Høyrygg",
@@ -93,7 +100,8 @@
     "xanthine": 17.0,
     "total_purines": 77.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Bogskuldre - okse",
@@ -105,7 +113,8 @@
     "xanthine": 11.0,
     "total_purines": 104.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Okse - forpart",
@@ -117,7 +126,8 @@
     "xanthine": 3.4,
     "total_purines": 77.0,
     "uric_acid": 1.2,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Oksenakke",
@@ -129,7 +139,8 @@
     "xanthine": 14.0,
     "total_purines": 101.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Entrecôte",
@@ -141,7 +152,8 @@
     "xanthine": 14.0,
     "total_purines": 74.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Mørbrad",
@@ -153,7 +165,8 @@
     "xanthine": 16.0,
     "total_purines": 123.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Okseskank",
@@ -165,7 +178,8 @@
     "xanthine": 17.0,
     "total_purines": 106.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Ytrefilet",
@@ -177,7 +191,8 @@
     "xanthine": 9.1,
     "total_purines": 90.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Indrefilet",
@@ -189,7 +204,8 @@
     "xanthine": 9.1,
     "total_purines": 98.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Amazake (fermentert drikkevare fra sake)",
@@ -201,7 +217,8 @@
     "xanthine": 0.0,
     "total_purines": 6.2,
     "uric_acid": null,
-    "serving": 200
+    "serving": 200,
+    "source": "usda"
   },
   {
     "name": "Fruktjuice",
@@ -213,7 +230,8 @@
     "xanthine": 0.0,
     "total_purines": 1.1,
     "uric_acid": null,
-    "serving": 200
+    "serving": 200,
+    "source": "usda"
   },
   {
     "name": "Grønn te drikke",
@@ -225,7 +243,8 @@
     "xanthine": 0.0,
     "total_purines": 1.7,
     "uric_acid": null,
-    "serving": 200
+    "serving": 200,
+    "source": "usda"
   },
   {
     "name": "Grønn te blader",
@@ -237,7 +256,8 @@
     "xanthine": 1.0,
     "total_purines": 204.0,
     "uric_acid": null,
-    "serving": 200
+    "serving": 200,
+    "source": "usda"
   },
   {
     "name": "Grønnsaksjuice",
@@ -249,7 +269,8 @@
     "xanthine": 0.0,
     "total_purines": 14.0,
     "uric_acid": null,
-    "serving": 200
+    "serving": 200,
+    "source": "usda"
   },
   {
     "name": "Bygg",
@@ -261,7 +282,8 @@
     "xanthine": 0.0,
     "total_purines": 44.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Brød",
@@ -273,7 +295,8 @@
     "xanthine": 0.6,
     "total_purines": 4.4,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Brødmel",
@@ -285,7 +308,8 @@
     "xanthine": 0.0,
     "total_purines": 26.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Bokhvetemel",
@@ -297,7 +321,8 @@
     "xanthine": 0.0,
     "total_purines": 76.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Kakemel",
@@ -309,7 +334,8 @@
     "xanthine": 0.0,
     "total_purines": 16.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Glassnudler",
@@ -321,7 +347,8 @@
     "xanthine": 0.0,
     "total_purines": 0.6,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Bakstmel",
@@ -333,7 +360,8 @@
     "xanthine": 0.0,
     "total_purines": 26.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Ramen nudler",
@@ -345,7 +373,8 @@
     "xanthine": 7.3,
     "total_purines": 22.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Riskli",
@@ -357,7 +386,8 @@
     "xanthine": 0.9,
     "total_purines": 100.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Riskjeks",
@@ -369,7 +399,8 @@
     "xanthine": 5.7,
     "total_purines": 14.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Hvit ris",
@@ -381,7 +412,8 @@
     "xanthine": 0.0,
     "total_purines": 33.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soba (bokhvetenudler)",
@@ -393,7 +425,8 @@
     "xanthine": 0.0,
     "total_purines": 7.6,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Spaghetti",
@@ -405,7 +438,8 @@
     "xanthine": 0.2,
     "total_purines": 6.8,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Udon (hvetenudler)",
@@ -417,7 +451,8 @@
     "xanthine": 0.0,
     "total_purines": 12.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Smør",
@@ -429,7 +464,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Ost, revet",
@@ -441,7 +477,8 @@
     "xanthine": 0.6,
     "total_purines": 13.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Fløte, animalsk",
@@ -453,7 +490,8 @@
     "xanthine": 0.0,
     "total_purines": 0.2,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Fløte, vegetabilsk",
@@ -465,7 +503,8 @@
     "xanthine": 0.0,
     "total_purines": 0.1,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Egg, høne",
@@ -477,7 +516,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Egg, vaktel",
@@ -489,7 +529,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Margarin",
@@ -501,7 +542,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Melk",
@@ -513,7 +555,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Yoghurt",
@@ -525,7 +568,8 @@
     "xanthine": 0.2,
     "total_purines": 5.2,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Yoghurt, flytende",
@@ -537,7 +581,8 @@
     "xanthine": 0.0,
     "total_purines": 1.4,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Ansjos",
@@ -549,7 +594,8 @@
     "xanthine": 4.0,
     "total_purines": 1109.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Ansjos",
@@ -561,7 +607,8 @@
     "xanthine": 1.2,
     "total_purines": 304.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Arabeskgreenling",
@@ -573,7 +620,8 @@
     "xanthine": 2.4,
     "total_purines": 150.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Ayu (søtvassfisk)",
@@ -585,7 +633,8 @@
     "xanthine": 0.0,
     "total_purines": 133.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Barrakuda",
@@ -597,7 +646,8 @@
     "xanthine": 0.0,
     "total_purines": 148.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Beltefisk",
@@ -609,7 +659,8 @@
     "xanthine": 5.6,
     "total_purines": 139.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Bonito",
@@ -621,7 +672,8 @@
     "xanthine": 0.0,
     "total_purines": 493.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Karpe",
@@ -633,7 +685,8 @@
     "xanthine": 0.0,
     "total_purines": 103.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Musling",
@@ -645,7 +698,8 @@
     "xanthine": 30.0,
     "total_purines": 145.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Musling",
@@ -657,7 +711,8 @@
     "xanthine": 0.0,
     "total_purines": 110.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Torsk",
@@ -669,7 +724,8 @@
     "xanthine": 1.5,
     "total_purines": 98.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Havål",
@@ -681,7 +737,8 @@
     "xanthine": 4.9,
     "total_purines": 95.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Krabbe rogn",
@@ -693,7 +750,8 @@
     "xanthine": 0.0,
     "total_purines": 152.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kongekrabbe",
@@ -705,7 +763,8 @@
     "xanthine": 14.0,
     "total_purines": 100.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Snøkrabbe",
@@ -717,7 +776,8 @@
     "xanthine": 47.0,
     "total_purines": 137.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Hårhale",
@@ -729,7 +789,8 @@
     "xanthine": 2.8,
     "total_purines": 386.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Japansk ål",
@@ -741,7 +802,8 @@
     "xanthine": 0.0,
     "total_purines": 92.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Engawa (fiskefinne kjøtt)",
@@ -753,7 +815,8 @@
     "xanthine": 0.0,
     "total_purines": 19.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Feitgreenling",
@@ -765,7 +828,8 @@
     "xanthine": 0.0,
     "total_purines": 129.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskebolle",
@@ -777,7 +841,8 @@
     "xanthine": 0.0,
     "total_purines": 68.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskeprodukt (hanpen)",
@@ -789,7 +854,8 @@
     "xanthine": 0.2,
     "total_purines": 13.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskeprodukt (kamaboko)",
@@ -801,7 +867,8 @@
     "xanthine": 0.0,
     "total_purines": 26.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskeprodukt (narutomaki)",
@@ -813,7 +880,8 @@
     "xanthine": 0.0,
     "total_purines": 32.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskeprodukt (sasakamaboko)",
@@ -825,7 +893,8 @@
     "xanthine": 0.0,
     "total_purines": 48.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskeprodukt (Satsuma age)",
@@ -837,7 +906,8 @@
     "xanthine": 0.0,
     "total_purines": 22.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskepølse",
@@ -849,7 +919,8 @@
     "xanthine": 0.0,
     "total_purines": 23.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fiskekake rør",
@@ -861,7 +932,8 @@
     "xanthine": 0.0,
     "total_purines": 48.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Flyndre, gulstripe",
@@ -873,7 +945,8 @@
     "xanthine": 0.0,
     "total_purines": 113.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Flyefisk",
@@ -885,7 +958,8 @@
     "xanthine": 0.0,
     "total_purines": 154.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Gnomefish, kjøtt",
@@ -897,7 +971,8 @@
     "xanthine": 0.8,
     "total_purines": 151.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Gnomefish, skinn",
@@ -909,7 +984,8 @@
     "xanthine": 2.5,
     "total_purines": 383.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kveite",
@@ -921,7 +997,8 @@
     "xanthine": 0.0,
     "total_purines": 134.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sild",
@@ -933,7 +1010,8 @@
     "xanthine": 0.0,
     "total_purines": 139.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Hummer",
@@ -945,7 +1023,8 @@
     "xanthine": 0.1,
     "total_purines": 102.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Makrell, fermentert",
@@ -957,7 +1036,8 @@
     "xanthine": 0.4,
     "total_purines": 207.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Mackerel, jack",
@@ -969,7 +1049,8 @@
     "xanthine": 0.0,
     "total_purines": 246.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Japansk makrell, skinn",
@@ -981,7 +1062,8 @@
     "xanthine": 0.0,
     "total_purines": 1175.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Mackerel, raw (unspecified)",
@@ -993,7 +1075,8 @@
     "xanthine": 0.0,
     "total_purines": 205.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Spansk makrell",
@@ -1005,7 +1088,8 @@
     "xanthine": 3.9,
     "total_purines": 162.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Melke, torsk",
@@ -1017,7 +1101,8 @@
     "xanthine": 3.0,
     "total_purines": 560.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Melke, globefisk",
@@ -1029,7 +1114,8 @@
     "xanthine": 2.8,
     "total_purines": 375.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Melke, stripet pigfisk",
@@ -1041,7 +1127,8 @@
     "xanthine": 7.7,
     "total_purines": 306.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Breiflabb lever",
@@ -1053,7 +1140,8 @@
     "xanthine": 4.4,
     "total_purines": 104.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Breiflabb lever",
@@ -1065,7 +1153,8 @@
     "xanthine": 3.1,
     "total_purines": 399.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Breiflabb",
@@ -1077,7 +1166,8 @@
     "xanthine": 0.5,
     "total_purines": 70.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Blekksprut innmat",
@@ -1089,7 +1179,8 @@
     "xanthine": 4.0,
     "total_purines": 80.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Blekksprut",
@@ -1101,7 +1192,8 @@
     "xanthine": 61.0,
     "total_purines": 137.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Krill",
@@ -1113,7 +1205,8 @@
     "xanthine": 26.0,
     "total_purines": 226.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Østers",
@@ -1125,7 +1218,8 @@
     "xanthine": 21.0,
     "total_purines": 122.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Stillehavsmakrell",
@@ -1137,7 +1231,8 @@
     "xanthine": 0.0,
     "total_purines": 209.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Stillehavsmakrell",
@@ -1149,7 +1244,8 @@
     "xanthine": 0.0,
     "total_purines": 155.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Stripet pigfisk",
@@ -1161,7 +1257,8 @@
     "xanthine": 0.0,
     "total_purines": 149.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Rød havrude",
@@ -1173,7 +1270,8 @@
     "xanthine": 0.0,
     "total_purines": 129.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Steinbit",
@@ -1185,7 +1283,8 @@
     "xanthine": 0.0,
     "total_purines": 124.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Rogn, flyefisk i soyasaus",
@@ -1197,7 +1296,8 @@
     "xanthine": 2.2,
     "total_purines": 92.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Rogn, diverse",
@@ -1209,7 +1309,8 @@
     "xanthine": 1.7,
     "total_purines": 81.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kolmule kjøtt",
@@ -1221,7 +1322,8 @@
     "xanthine": 0.2,
     "total_purines": 123.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kolmule skinn",
@@ -1233,7 +1335,8 @@
     "xanthine": 1.6,
     "total_purines": 67.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sandfisk",
@@ -1245,7 +1348,8 @@
     "xanthine": 3.0,
     "total_purines": 98.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Salmon",
@@ -1257,7 +1361,8 @@
     "xanthine": 0.0,
     "total_purines": 133.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Pukkellaks",
@@ -1269,7 +1374,8 @@
     "xanthine": 0.0,
     "total_purines": 125.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Laks",
@@ -1281,7 +1387,8 @@
     "xanthine": 0.0,
     "total_purines": 119.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sardin, baby",
@@ -1293,7 +1400,8 @@
     "xanthine": 0.0,
     "total_purines": 746.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sardin, fermentert",
@@ -1305,7 +1413,8 @@
     "xanthine": 1.6,
     "total_purines": 116.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sardin",
@@ -1317,7 +1426,8 @@
     "xanthine": 3.0,
     "total_purines": 305.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sardin",
@@ -1329,7 +1439,8 @@
     "xanthine": 0.0,
     "total_purines": 211.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kamskjell",
@@ -1341,7 +1452,8 @@
     "xanthine": 1.0,
     "total_purines": 77.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sjøpølse",
@@ -1353,7 +1465,8 @@
     "xanthine": 0.0,
     "total_purines": 8.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kråkebolle",
@@ -1365,7 +1478,8 @@
     "xanthine": 9.1,
     "total_purines": 137.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Havabbor, japansk, lever",
@@ -1377,7 +1491,8 @@
     "xanthine": 8.4,
     "total_purines": 218.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Havabbor, japansk, skinn",
@@ -1389,7 +1504,8 @@
     "xanthine": 3.9,
     "total_purines": 1400.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Havabbor",
@@ -1401,7 +1517,8 @@
     "xanthine": 0.0,
     "total_purines": 107.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Shad",
@@ -1413,7 +1530,8 @@
     "xanthine": 0.4,
     "total_purines": 187.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Shishamo med rogn",
@@ -1425,7 +1543,8 @@
     "xanthine": 2.6,
     "total_purines": 150.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Dypvannsreke",
@@ -1437,7 +1556,8 @@
     "xanthine": 1.7,
     "total_purines": 222.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Reke (sand- og stillehavsarter)",
@@ -1449,7 +1569,8 @@
     "xanthine": 6.1,
     "total_purines": 177.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Shrimp, raw (unspecified)",
@@ -1461,7 +1582,8 @@
     "xanthine": 38.0,
     "total_purines": 167.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sakurareke",
@@ -1473,7 +1595,8 @@
     "xanthine": 29.0,
     "total_purines": 749.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Smelt",
@@ -1485,7 +1608,8 @@
     "xanthine": 0.0,
     "total_purines": 95.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Snegl",
@@ -1497,7 +1621,8 @@
     "xanthine": 8.5,
     "total_purines": 182.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Blekksprut innmat",
@@ -1509,7 +1634,8 @@
     "xanthine": 20.0,
     "total_purines": 60.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Squid, raw (unspecified)",
@@ -1521,7 +1647,8 @@
     "xanthine": 32.0,
     "total_purines": 151.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Blekksprut, stripped",
@@ -1533,7 +1660,8 @@
     "xanthine": 1.0,
     "total_purines": 94.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Sverdfisk",
@@ -1545,7 +1673,8 @@
     "xanthine": 0.8,
     "total_purines": 132.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Flisfisk",
@@ -1557,7 +1686,8 @@
     "xanthine": 0.0,
     "total_purines": 120.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Ørret, regnbue",
@@ -1569,7 +1699,8 @@
     "xanthine": 0.0,
     "total_purines": 181.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Tunfisk (Bonito)",
@@ -1581,7 +1712,8 @@
     "xanthine": 0.0,
     "total_purines": 211.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Tuna",
@@ -1593,7 +1725,8 @@
     "xanthine": 0.0,
     "total_purines": 117.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Tuna, raw (unspecified)",
@@ -1605,7 +1738,8 @@
     "xanthine": 0.0,
     "total_purines": 157.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Piggvar lever",
@@ -1617,7 +1751,8 @@
     "xanthine": 7.9,
     "total_purines": 264.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Piggvar skinn",
@@ -1629,7 +1764,8 @@
     "xanthine": 9.2,
     "total_purines": 142.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Piggvar",
@@ -1641,7 +1777,8 @@
     "xanthine": 7.1,
     "total_purines": 112.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Værsmerling",
@@ -1653,7 +1790,8 @@
     "xanthine": 6.1,
     "total_purines": 136.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Småsild",
@@ -1665,7 +1803,8 @@
     "xanthine": 7.5,
     "total_purines": 471.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Hvitting",
@@ -1677,7 +1816,8 @@
     "xanthine": 0.0,
     "total_purines": 144.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Gultale",
@@ -1689,7 +1829,8 @@
     "xanthine": 0.0,
     "total_purines": 121.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Gultale, ung",
@@ -1701,7 +1842,8 @@
     "xanthine": 0.2,
     "total_purines": 153.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Avokado",
@@ -1713,7 +1855,8 @@
     "xanthine": 0.0,
     "total_purines": 18.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Banan",
@@ -1725,7 +1868,8 @@
     "xanthine": 0.0,
     "total_purines": 3.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Gojibær",
@@ -1737,7 +1881,8 @@
     "xanthine": 0.6,
     "total_purines": 5.5,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Jordbær",
@@ -1749,7 +1894,8 @@
     "xanthine": 0.0,
     "total_purines": 2.2,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Fårekjøtt",
@@ -1761,7 +1907,8 @@
     "xanthine": 0.0,
     "total_purines": 95.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Hval",
@@ -1773,7 +1920,8 @@
     "xanthine": 0.0,
     "total_purines": 99.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Tofu rester (Okara)",
@@ -1785,7 +1933,8 @@
     "xanthine": 5.0,
     "total_purines": 49.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Bønner, adzuki",
@@ -1797,7 +1946,8 @@
     "xanthine": 0.0,
     "total_purines": 78.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Hestebønner",
@@ -1809,7 +1959,8 @@
     "xanthine": 0.2,
     "total_purines": 36.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Kikerter",
@@ -1821,7 +1972,8 @@
     "xanthine": 1.7,
     "total_purines": 26.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Miso",
@@ -1833,7 +1985,8 @@
     "xanthine": 4.2,
     "total_purines": 56.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Peanøtter",
@@ -1845,7 +1998,8 @@
     "xanthine": 1.6,
     "total_purines": 49.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Erter, grønne",
@@ -1857,7 +2011,8 @@
     "xanthine": 2.0,
     "total_purines": 22.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Erter, røde",
@@ -1869,7 +2024,8 @@
     "xanthine": 0.9,
     "total_purines": 25.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soyamelk",
@@ -1881,7 +2037,8 @@
     "xanthine": 0.01,
     "total_purines": 22.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soyaproteinkonsentrat",
@@ -1893,7 +2050,8 @@
     "xanthine": 1.5,
     "total_purines": 192.0,
     "uric_acid": 0.0,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soyasaus (shoyu)",
@@ -1905,7 +2063,8 @@
     "xanthine": 15.0,
     "total_purines": 50.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soyabønne, svart",
@@ -1917,7 +2076,8 @@
     "xanthine": 1.5,
     "total_purines": 67.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soyabønne, fermentert (Natto)",
@@ -1929,7 +2089,8 @@
     "xanthine": 15.0,
     "total_purines": 114.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Soybeans, dried",
@@ -1941,7 +2102,8 @@
     "xanthine": 0.0,
     "total_purines": 173.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu (Kinu)",
@@ -1953,7 +2115,8 @@
     "xanthine": 0.7,
     "total_purines": 20.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu, boiled 3 minutes",
@@ -1965,7 +2128,8 @@
     "xanthine": 0.02,
     "total_purines": 22.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu, boiled 5 minutes",
@@ -1977,7 +2141,8 @@
     "xanthine": 0.7,
     "total_purines": 36.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu, fritert",
@@ -1989,7 +2154,8 @@
     "xanthine": 1.2,
     "total_purines": 54.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu, tørket-fryst (koyadofu)",
@@ -2001,7 +2167,8 @@
     "xanthine": 3.7,
     "total_purines": 292.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Tofu, raw (nigari)",
@@ -2013,7 +2180,8 @@
     "xanthine": 0.0,
     "total_purines": 31.0,
     "uric_acid": null,
-    "serving": 70
+    "serving": 70,
+    "source": "usda"
   },
   {
     "name": "Mandler",
@@ -2025,7 +2193,8 @@
     "xanthine": 1.7,
     "total_purines": 31.0,
     "uric_acid": null,
-    "serving": 30
+    "serving": 30,
+    "source": "usda"
   },
   {
     "name": "Chiafrø",
@@ -2037,7 +2206,8 @@
     "xanthine": 2.1,
     "total_purines": 59.0,
     "uric_acid": null,
-    "serving": 30
+    "serving": 30,
+    "source": "usda"
   },
   {
     "name": "Valnøtter",
@@ -2049,7 +2219,8 @@
     "xanthine": 0.0,
     "total_purines": 20.0,
     "uric_acid": null,
-    "serving": 30
+    "serving": 30,
+    "source": "usda"
   },
   {
     "name": "Leverpostei",
@@ -2061,7 +2232,8 @@
     "xanthine": 9.1,
     "total_purines": 80.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Svinehjerte",
@@ -2073,7 +2245,8 @@
     "xanthine": 0.0,
     "total_purines": 119.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Svinenyre",
@@ -2085,7 +2258,8 @@
     "xanthine": 0.0,
     "total_purines": 195.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Svinelever",
@@ -2097,7 +2271,8 @@
     "xanthine": 67.0,
     "total_purines": 285.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Svinetunge",
@@ -2109,7 +2284,8 @@
     "xanthine": 0.0,
     "total_purines": 104.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Svinenakke",
@@ -2121,7 +2297,8 @@
     "xanthine": 0.0,
     "total_purines": 71.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Svineribbe",
@@ -2133,7 +2310,8 @@
     "xanthine": 0.0,
     "total_purines": 76.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Svinestek",
@@ -2145,7 +2323,8 @@
     "xanthine": 0.0,
     "total_purines": 113.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Svinebog",
@@ -2157,7 +2336,8 @@
     "xanthine": 0.0,
     "total_purines": 94.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Svinefilet",
@@ -2169,7 +2349,8 @@
     "xanthine": 0.0,
     "total_purines": 91.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Svineindrefilet",
@@ -2181,7 +2362,8 @@
     "xanthine": 0.0,
     "total_purines": 120.0,
     "uric_acid": null,
-    "serving": 150
+    "serving": 150,
+    "source": "usda"
   },
   {
     "name": "Kyllingkråse",
@@ -2193,7 +2375,8 @@
     "xanthine": 6.1,
     "total_purines": 143.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllinghjerte",
@@ -2205,7 +2388,8 @@
     "xanthine": 138.0,
     "total_purines": 224.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllinglever",
@@ -2217,7 +2401,8 @@
     "xanthine": 31.0,
     "total_purines": 303.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Foie gras",
@@ -2229,7 +2414,8 @@
     "xanthine": 23.0,
     "total_purines": 82.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllingbryst",
@@ -2241,7 +2427,8 @@
     "xanthine": 1.0,
     "total_purines": 141.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllinglår",
@@ -2253,7 +2440,8 @@
     "xanthine": 1.2,
     "total_purines": 118.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllingskinn",
@@ -2265,7 +2453,8 @@
     "xanthine": 0.0,
     "total_purines": 120.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kyllingvinge",
@@ -2277,7 +2466,8 @@
     "xanthine": 0.0,
     "total_purines": 138.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kylling, lyst kjøtt",
@@ -2289,7 +2479,8 @@
     "xanthine": 3.4,
     "total_purines": 111.0,
     "uric_acid": null,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Corned beef",
@@ -2301,7 +2492,8 @@
     "xanthine": 1.5,
     "total_purines": 47.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Frankfurterpølse",
@@ -2313,7 +2505,8 @@
     "xanthine": 1.5,
     "total_purines": 50.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Skinke",
@@ -2325,7 +2518,8 @@
     "xanthine": 0.0,
     "total_purines": 69.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Pork, bacon",
@@ -2337,7 +2531,8 @@
     "xanthine": 0.0,
     "total_purines": 62.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Prosciutto (Parmaskinke)",
@@ -2349,7 +2544,8 @@
     "xanthine": 0.0,
     "total_purines": 138.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Salami",
@@ -2361,7 +2557,8 @@
     "xanthine": 7.6,
     "total_purines": 120.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Wienerpølse",
@@ -2373,7 +2570,8 @@
     "xanthine": 0.0,
     "total_purines": 46.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Cayennepepper pulver",
@@ -2385,7 +2583,8 @@
     "xanthine": 0.0,
     "total_purines": 20.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Karri roux",
@@ -2397,7 +2596,8 @@
     "xanthine": 0.8,
     "total_purines": 16.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Ketchup",
@@ -2409,7 +2609,8 @@
     "xanthine": 0.0,
     "total_purines": 11.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Majones",
@@ -2421,7 +2622,8 @@
     "xanthine": 0.0,
     "total_purines": 0.6,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Mirin (matlaging vin)",
@@ -2433,7 +2635,8 @@
     "xanthine": 0.5,
     "total_purines": 1.2,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Sennep",
@@ -2445,7 +2648,8 @@
     "xanthine": 0.1,
     "total_purines": 25.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Rismalt, saltet",
@@ -2457,7 +2661,8 @@
     "xanthine": 0.0,
     "total_purines": 14.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Sake lees",
@@ -2469,7 +2674,8 @@
     "xanthine": 7.5,
     "total_purines": 89.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Barbecuesaus",
@@ -2481,7 +2687,8 @@
     "xanthine": 0.2,
     "total_purines": 15.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Chilibønnesaus, kinesisk",
@@ -2493,7 +2700,8 @@
     "xanthine": 1.2,
     "total_purines": 8.8,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Fiskesaus",
@@ -2505,7 +2713,8 @@
     "xanthine": 10.0,
     "total_purines": 93.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Østersaus",
@@ -2517,7 +2726,8 @@
     "xanthine": 11.0,
     "total_purines": 134.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Suppe, kinesisk type, pulver",
@@ -2529,7 +2739,8 @@
     "xanthine": 12.0,
     "total_purines": 186.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Muslingsuppe type, pulver",
@@ -2541,7 +2752,8 @@
     "xanthine": 0.6,
     "total_purines": 47.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Consommésuppe, pulver",
@@ -2553,7 +2765,8 @@
     "xanthine": 5.8,
     "total_purines": 180.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Matsutake suppe, pulver",
@@ -2565,7 +2778,8 @@
     "xanthine": 1.2,
     "total_purines": 234.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Potagesuppe, pulver",
@@ -2577,7 +2791,8 @@
     "xanthine": 1.8,
     "total_purines": 38.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Ramensuppe, tørr",
@@ -2589,7 +2804,8 @@
     "xanthine": 1.5,
     "total_purines": 33.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Soup, stock, Chinese",
@@ -2601,7 +2817,8 @@
     "xanthine": 18.0,
     "total_purines": 509.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Umamikraft, pulver",
@@ -2613,7 +2830,8 @@
     "xanthine": 1.5,
     "total_purines": 685.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Wasabi",
@@ -2625,7 +2843,8 @@
     "xanthine": 0.0,
     "total_purines": 0.7,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Gjær",
@@ -2637,7 +2856,8 @@
     "xanthine": 0.0,
     "total_purines": 847.0,
     "uric_acid": null,
-    "serving": 50
+    "serving": 50,
+    "source": "usda"
   },
   {
     "name": "Sjokolade",
@@ -2649,7 +2869,8 @@
     "xanthine": 0.0,
     "total_purines": 8.1,
     "uric_acid": null,
-    "serving": 25
+    "serving": 25,
+    "source": "usda"
   },
   {
     "name": "Honning",
@@ -2661,7 +2882,8 @@
     "xanthine": 0.0,
     "total_purines": 0.8,
     "uric_acid": null,
-    "serving": 25
+    "serving": 25,
+    "source": "usda"
   },
   {
     "name": "Asparges",
@@ -2673,7 +2895,8 @@
     "xanthine": 0.2,
     "total_purines": 33.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Balsampære (goya)",
@@ -2685,7 +2908,8 @@
     "xanthine": 1.0,
     "total_purines": 10.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Bambuskudd",
@@ -2697,7 +2921,8 @@
     "xanthine": 0.5,
     "total_purines": 47.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Bønnespirer, med bønne",
@@ -2709,7 +2934,8 @@
     "xanthine": 1.1,
     "total_purines": 57.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Bønnespirer, uten bønne",
@@ -2721,7 +2947,8 @@
     "xanthine": 3.5,
     "total_purines": 35.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Korsblomst (blomst)",
@@ -2733,7 +2960,8 @@
     "xanthine": 0.5,
     "total_purines": 27.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Brokkolispirer",
@@ -2745,7 +2973,8 @@
     "xanthine": 4.8,
     "total_purines": 130.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Brokkoli",
@@ -2757,7 +2986,8 @@
     "xanthine": 0.7,
     "total_purines": 52.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Brokkoli",
@@ -2769,7 +2999,8 @@
     "xanthine": 5.3,
     "total_purines": 70.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Borre",
@@ -2781,7 +3012,8 @@
     "xanthine": 0.0,
     "total_purines": 5.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Kinesisk kål (pak-choi)",
@@ -2793,7 +3025,8 @@
     "xanthine": 0.3,
     "total_purines": 7.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Kinesisk kål (qing-geng-cai)",
@@ -2805,7 +3038,8 @@
     "xanthine": 0.3,
     "total_purines": 12.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Kål",
@@ -2817,7 +3051,8 @@
     "xanthine": 0.0,
     "total_purines": 3.2,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Gulrot",
@@ -2829,7 +3064,8 @@
     "xanthine": 0.0,
     "total_purines": 2.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Blomkål",
@@ -2841,7 +3077,8 @@
     "xanthine": 0.0,
     "total_purines": 57.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Koriander",
@@ -2853,7 +3090,8 @@
     "xanthine": 0.6,
     "total_purines": 39.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Mais",
@@ -2865,7 +3103,8 @@
     "xanthine": 0.1,
     "total_purines": 12.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Agurk",
@@ -2877,7 +3116,8 @@
     "xanthine": 0.1,
     "total_purines": 9.4,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Aubergine",
@@ -2889,7 +3129,8 @@
     "xanthine": 1.6,
     "total_purines": 51.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Krysantemum",
@@ -2901,7 +3142,8 @@
     "xanthine": 0.3,
     "total_purines": 47.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Hvitløkgressløk",
@@ -2913,7 +3155,8 @@
     "xanthine": 0.1,
     "total_purines": 19.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Hvitløk",
@@ -2925,7 +3168,8 @@
     "xanthine": 0.7,
     "total_purines": 17.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Ingefærrot",
@@ -2937,7 +3181,8 @@
     "xanthine": 0.5,
     "total_purines": 2.3,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk ingefær (myoga)",
@@ -2949,7 +3194,8 @@
     "xanthine": 0.4,
     "total_purines": 7.7,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Grønne bønner",
@@ -2961,7 +3207,8 @@
     "xanthine": 0.6,
     "total_purines": 7.5,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Honewort",
@@ -2973,7 +3220,8 @@
     "xanthine": 0.0,
     "total_purines": 12.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Konnyaku",
@@ -2985,7 +3233,8 @@
     "xanthine": 0.0,
     "total_purines": 0.4,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk purre (negi)",
@@ -2997,7 +3246,8 @@
     "xanthine": 0.0,
     "total_purines": 41.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Salat",
@@ -3009,7 +3259,8 @@
     "xanthine": 0.0,
     "total_purines": 4.7,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Lotusrot",
@@ -3021,7 +3272,8 @@
     "xanthine": 0.0,
     "total_purines": 0.3,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Mizuna (grønnsaksennep)",
@@ -3033,7 +3285,8 @@
     "xanthine": 0.1,
     "total_purines": 20.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, bunapii",
@@ -3045,7 +3298,8 @@
     "xanthine": 3.0,
     "total_purines": 31.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, hatakeshimeji",
@@ -3057,7 +3311,8 @@
     "xanthine": 0.5,
     "total_purines": 16.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, judasøre",
@@ -3069,7 +3324,8 @@
     "xanthine": 0.0,
     "total_purines": 156.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, tsukuritake",
@@ -3081,7 +3337,8 @@
     "xanthine": 0.0,
     "total_purines": 50.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, usu-hiratake",
@@ -3093,7 +3350,8 @@
     "xanthine": 3.5,
     "total_purines": 38.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, hvit aragekikurage",
@@ -3105,7 +3363,8 @@
     "xanthine": 0.1,
     "total_purines": 6.9,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, hvit hiratake",
@@ -3117,7 +3376,8 @@
     "xanthine": 4.3,
     "total_purines": 67.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, yamabushitake",
@@ -3129,7 +3389,8 @@
     "xanthine": 0.0,
     "total_purines": 34.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, yanagimatsutake",
@@ -3141,7 +3402,8 @@
     "xanthine": 3.3,
     "total_purines": 26.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, bunashimeji",
@@ -3153,7 +3415,8 @@
     "xanthine": 2.3,
     "total_purines": 21.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, enoki",
@@ -3165,7 +3428,8 @@
     "xanthine": 0.0,
     "total_purines": 49.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, kongsopp",
@@ -3177,7 +3441,8 @@
     "xanthine": 2.4,
     "total_purines": 13.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, østerssopp",
@@ -3189,7 +3454,8 @@
     "xanthine": 0.0,
     "total_purines": 142.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, maitake",
@@ -3201,7 +3467,8 @@
     "xanthine": 4.4,
     "total_purines": 99.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, nameko",
@@ -3213,7 +3480,8 @@
     "xanthine": 0.7,
     "total_purines": 19.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, shiitake",
@@ -3225,7 +3493,8 @@
     "xanthine": 4.8,
     "total_purines": 312.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sopp, shiitake",
@@ -3237,7 +3506,8 @@
     "xanthine": 1.0,
     "total_purines": 23.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sennepspinat (komatsuna), moden",
@@ -3249,7 +3519,8 @@
     "xanthine": 0.0,
     "total_purines": 11.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sennepspinat (komatsuna), ung",
@@ -3261,7 +3532,8 @@
     "xanthine": 1.4,
     "total_purines": 39.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Okra",
@@ -3273,7 +3545,8 @@
     "xanthine": 0.7,
     "total_purines": 40.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Løk",
@@ -3285,7 +3558,8 @@
     "xanthine": 0.0,
     "total_purines": 2.2,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, rød",
@@ -3297,7 +3571,8 @@
     "xanthine": 0.1,
     "total_purines": 1.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Parsley",
@@ -3309,7 +3584,8 @@
     "xanthine": 0.0,
     "total_purines": 289.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk persille",
@@ -3321,7 +3597,8 @@
     "xanthine": 0.1,
     "total_purines": 19.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Erter, grønne",
@@ -3333,7 +3610,8 @@
     "xanthine": 0.0,
     "total_purines": 19.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sukkerert",
@@ -3345,7 +3623,8 @@
     "xanthine": 0.5,
     "total_purines": 10.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, grønn",
@@ -3357,7 +3636,8 @@
     "xanthine": 0.1,
     "total_purines": 2.3,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, grønn",
@@ -3369,7 +3649,8 @@
     "xanthine": 0.2,
     "total_purines": 3.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, rød",
@@ -3381,7 +3662,8 @@
     "xanthine": 0.0,
     "total_purines": 5.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, rød/grønn",
@@ -3393,7 +3675,8 @@
     "xanthine": 0.0,
     "total_purines": 0.9,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Paprika, søt, grønn",
@@ -3405,7 +3688,8 @@
     "xanthine": 11.0,
     "total_purines": 69.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Perillablader, shiso",
@@ -3417,7 +3701,8 @@
     "xanthine": 0.2,
     "total_purines": 42.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Potet",
@@ -3429,7 +3714,8 @@
     "xanthine": 0.0,
     "total_purines": 6.5,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Gresskar",
@@ -3441,7 +3727,8 @@
     "xanthine": 2.5,
     "total_purines": 57.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk reddikblad",
@@ -3453,7 +3740,8 @@
     "xanthine": 0.0,
     "total_purines": 34.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk reddik",
@@ -3465,7 +3753,8 @@
     "xanthine": 0.0,
     "total_purines": 1.7,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Reddikspirer, hvit",
@@ -3477,7 +3766,8 @@
     "xanthine": 3.5,
     "total_purines": 73.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tang, hijiki",
@@ -3489,7 +3779,8 @@
     "xanthine": 0.0,
     "total_purines": 133.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tang, kombu",
@@ -3501,7 +3792,8 @@
     "xanthine": 1.9,
     "total_purines": 46.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tang, mozuku",
@@ -3513,7 +3805,8 @@
     "xanthine": 0.0,
     "total_purines": 16.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tang, nori",
@@ -3525,7 +3818,8 @@
     "xanthine": 3.2,
     "total_purines": 592.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tang, wakame",
@@ -3537,7 +3831,8 @@
     "xanthine": 0.0,
     "total_purines": 262.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Sesam",
@@ -3549,7 +3844,8 @@
     "xanthine": 0.8,
     "total_purines": 36.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Soyabønner, grønne",
@@ -3561,7 +3857,8 @@
     "xanthine": 0.0,
     "total_purines": 48.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Spinat",
@@ -3573,7 +3870,8 @@
     "xanthine": 6.6,
     "total_purines": 39.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Spinach, mature",
@@ -3585,7 +3883,8 @@
     "xanthine": 7.7,
     "total_purines": 51.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Spinach, young",
@@ -3597,7 +3896,8 @@
     "xanthine": 0.0,
     "total_purines": 172.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Squash, zucchini",
@@ -3609,7 +3909,8 @@
     "xanthine": 0.8,
     "total_purines": 13.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Søtpotet",
@@ -3621,7 +3922,8 @@
     "xanthine": 0.6,
     "total_purines": 17.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Taro",
@@ -3633,7 +3935,8 @@
     "xanthine": 0.0,
     "total_purines": 1.8,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tomat, kirsebær",
@@ -3645,7 +3948,8 @@
     "xanthine": 0.0,
     "total_purines": 3.1,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Tomat",
@@ -3657,7 +3961,8 @@
     "xanthine": 0.1,
     "total_purines": 6.6,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Nepe",
@@ -3669,7 +3974,8 @@
     "xanthine": 0.0,
     "total_purines": 3.9,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Japansk yam",
@@ -3681,7 +3987,8 @@
     "xanthine": 0.0,
     "total_purines": 4.0,
     "uric_acid": null,
-    "serving": 80
+    "serving": 80,
+    "source": "usda"
   },
   {
     "name": "Bacon, kjøttfritt",
@@ -3693,7 +4000,8 @@
     "xanthine": 1.0,
     "total_purines": 74.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Kylling, kjøttfri",
@@ -3705,7 +4013,8 @@
     "xanthine": 0.0,
     "total_purines": 77.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Frankfurterpølse, kjøttfri",
@@ -3717,7 +4026,8 @@
     "xanthine": 0.2,
     "total_purines": 32.0,
     "uric_acid": 2.1,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Pølse, kjøttfri",
@@ -3729,7 +4039,8 @@
     "xanthine": 0.3,
     "total_purines": 46.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'kråse' fra soya",
@@ -3741,7 +4052,8 @@
     "xanthine": 0.0,
     "total_purines": 0.3,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Eggehvite schnitzel (vegetarisk 'biff')",
@@ -3753,7 +4065,8 @@
     "xanthine": 7.0,
     "total_purines": 39.0,
     "uric_acid": 0.9,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Skinke-stil vegetarskiver, fra mycoprotein",
@@ -3765,7 +4078,8 @@
     "xanthine": 0.6,
     "total_purines": 117.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Instant-vegetarisk tørket 'hjort' fra soya",
@@ -3777,7 +4091,8 @@
     "xanthine": 2.4,
     "total_purines": 116.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Instant-vegetarisk tørket 'fisk' fra soya",
@@ -3789,7 +4104,8 @@
     "xanthine": 0.0,
     "total_purines": 89.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Påleggskiver, kjøttfritt",
@@ -3801,7 +4117,8 @@
     "xanthine": 0.7,
     "total_purines": 98.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Tofuburger",
@@ -3813,7 +4130,8 @@
     "xanthine": 0.0,
     "total_purines": 103.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'Ba Sa fisk' fra soya",
@@ -3825,7 +4143,8 @@
     "xanthine": 0.6,
     "total_purines": 83.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'kjøttbrød' eller pattier",
@@ -3837,7 +4156,8 @@
     "xanthine": 0.2,
     "total_purines": 42.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetariske 'vaktelegg'",
@@ -3849,7 +4169,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'biff' fra hvete",
@@ -3861,7 +4182,8 @@
     "xanthine": 0.0,
     "total_purines": 21.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'reke'",
@@ -3873,7 +4195,8 @@
     "xanthine": 0.0,
     "total_purines": 0.1,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Veggisburgere eller soyaburgere",
@@ -3885,7 +4208,8 @@
     "xanthine": 0.5,
     "total_purines": 65.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegetarisk 'biff' fra soya",
@@ -3897,7 +4221,8 @@
     "xanthine": 0.7,
     "total_purines": 62.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Vegideli fiskepinner stil",
@@ -3909,7 +4234,8 @@
     "xanthine": 0.0,
     "total_purines": 67.0,
     "uric_acid": 0.0,
-    "serving": 100
+    "serving": 100,
+    "source": "usda"
   },
   {
     "name": "Øl eksport",
@@ -3921,7 +4247,8 @@
     "xanthine": 1.7,
     "total_purines": 11.0,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Øl, vanlig type",
@@ -3933,7 +4260,8 @@
     "xanthine": 1.4,
     "total_purines": 8.5,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Øl, mørk",
@@ -3945,7 +4273,8 @@
     "xanthine": 1.1,
     "total_purines": 14.0,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Hveteøl",
@@ -3957,7 +4286,8 @@
     "xanthine": 2.7,
     "total_purines": 8.1,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Lettøl",
@@ -3969,7 +4299,8 @@
     "xanthine": 0.6,
     "total_purines": 4.6,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Pils",
@@ -3981,7 +4312,8 @@
     "xanthine": 1.7,
     "total_purines": 9.8,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Brandy",
@@ -3993,7 +4325,8 @@
     "xanthine": 0.1,
     "total_purines": 0.4,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Maltdrikk/alkoholfritt øl",
@@ -4005,7 +4338,8 @@
     "xanthine": 0.4,
     "total_purines": 2.9,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Radler (øl og brus blanding)",
@@ -4017,7 +4351,8 @@
     "xanthine": 0.0,
     "total_purines": 3.6,
     "uric_acid": null,
-    "serving": 330
+    "serving": 330,
+    "source": "usda"
   },
   {
     "name": "Sake",
@@ -4029,7 +4364,8 @@
     "xanthine": 0.6,
     "total_purines": 1.4,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Shochu (japansk brennevin)",
@@ -4041,7 +4377,8 @@
     "xanthine": 0.0,
     "total_purines": 0.0,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Shoko-shu (kinesisk brennevin)",
@@ -4053,7 +4390,8 @@
     "xanthine": 2.9,
     "total_purines": 9.7,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Ume likør",
@@ -4065,7 +4403,8 @@
     "xanthine": 0.0,
     "total_purines": 0.2,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Whisky",
@@ -4077,7 +4416,8 @@
     "xanthine": 0.0,
     "total_purines": 0.2,
     "uric_acid": null,
-    "serving": 20
+    "serving": 20,
+    "source": "usda"
   },
   {
     "name": "Vin",
@@ -4089,7 +4429,8 @@
     "xanthine": 0.7,
     "total_purines": 1.2,
     "uric_acid": null,
-    "serving": 125
+    "serving": 125,
+    "source": "usda"
   },
   {
     "name": "Asparges - Øvre del",
@@ -4101,7 +4442,8 @@
     "xanthine": 0.3,
     "total_purines": 55.3,
     "uric_acid": 64.7,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Asparges - Nedre del",
@@ -4113,7 +4455,8 @@
     "xanthine": 0.1,
     "total_purines": 10.2,
     "uric_acid": 12.0,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Bittermelon (goya)",
@@ -4125,7 +4468,8 @@
     "xanthine": 1.0,
     "total_purines": 9.9,
     "uric_acid": 11.6,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Bambusskudd - Øvre del",
@@ -4137,7 +4481,8 @@
     "xanthine": 0.6,
     "total_purines": 63.3,
     "uric_acid": 74.0,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Bambusskudd - Nedre del",
@@ -4149,7 +4494,8 @@
     "xanthine": 0.4,
     "total_purines": 30.8,
     "uric_acid": 36.1,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Kinakål",
@@ -4161,7 +4507,8 @@
     "xanthine": 0.3,
     "total_purines": 7.0,
     "uric_acid": 8.2,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Gressløk (nira)",
@@ -4173,7 +4520,8 @@
     "xanthine": 0.1,
     "total_purines": 19.4,
     "uric_acid": 23.0,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Grønn paprika",
@@ -4185,7 +4533,8 @@
     "xanthine": 10.7,
     "total_purines": 69.2,
     "uric_acid": 79.8,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Komatsuna - Blad",
@@ -4197,7 +4546,8 @@
     "xanthine": 0.0,
     "total_purines": 10.6,
     "uric_acid": 12.3,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Komatsuna - Unge blad",
@@ -4209,7 +4559,8 @@
     "xanthine": 1.4,
     "total_purines": 39.0,
     "uric_acid": 45.1,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Spinat - Blad",
@@ -4221,7 +4572,8 @@
     "xanthine": 7.7,
     "total_purines": 51.4,
     "uric_acid": 61.0,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Squash",
@@ -4233,7 +4585,8 @@
     "xanthine": 0.8,
     "total_purines": 13.1,
     "uric_acid": 15.3,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Hest",
@@ -4245,7 +4598,8 @@
     "xanthine": 15.2,
     "total_purines": 113.1,
     "uric_acid": 136.5,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Benfri skinke",
@@ -4257,7 +4611,8 @@
     "xanthine": 0.0,
     "total_purines": 74.2,
     "uric_acid": 90.8,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   },
   {
     "name": "Presseskinke",
@@ -4269,6 +4624,7 @@
     "xanthine": 0.0,
     "total_purines": 64.4,
     "uric_acid": 79.0,
-    "serving": 100
+    "serving": 100,
+    "source": "jstage"
   }
 ]

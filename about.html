@@ -107,6 +107,16 @@
                 Appen hjelper personer med urinsyregikt å ta informerte valg om kostholdet sitt.
             </p>
 
+            <h2>Funksjoner</h2>
+            <ul>
+                <li><strong>Søk og bla:</strong> Søk direkte etter matvarer eller bla gjennom 15+ kategorier</li>
+                <li><strong>3 visningsmoduser:</strong> Se data per 100g, per porsjon, eller vektet risiko</li>
+                <li><strong>Pin og sammenlign:</strong> Pin opptil 5 matvarer for side-ved-side sammenligning (📍/📌)</li>
+                <li><strong>Konfigurerbar fargekoding:</strong> Juster grenseverdier i Innstillinger (⚙️)</li>
+                <li><strong>Detaljert informasjon:</strong> Se purinsammensetning og vektet risiko for hver matvare</li>
+                <li><strong>Kildehenvisninger:</strong> Alle data er fra USDA og vitenskapelig peer-reviewed forskning</li>
+            </ul>
+
             <h2>Hvordan beregnes risikoscore?</h2>
             <p>
                 Ikke alle purinbaser er like farlige. Denne appen bruker en vitenskapelig basert vekting for å
@@ -125,12 +135,31 @@
             </ul>
 
             <div class="formula-box">
-                Uricogen ekvivalent (U_eq) = 1.0 × Hypoxantin + 0.6 × Adenin + 0.1 × Guanin + 0.1 × Xantin
-                <br><br>
-                Risikoscore = U_eq / 300
+                Vektet risikoscore = 1.0 × Hypoxantin + 0.6 × Adenin + 0.1 × Guanin + 0.1 × Xantin
             </div>
 
             <h3>Fargekodede risikonivåer</h3>
+            <p>
+                Appen bruker separate fargeskalaer for de tre visningsmodusene:
+            </p>
+
+            <p style="margin-top: 20px;">
+                <strong>1. For purininnhold per 100g:</strong>
+            </p>
+            <p>
+                Standard: 🟢 &lt;50 mg, 🟡 50-150 mg, 🟠 150-200 mg, 🔴 &gt;200 mg
+            </p>
+
+            <p style="margin-top: 15px;">
+                <strong>2. For purininnhold per porsjon:</strong>
+            </p>
+            <p>
+                Standard: 🟢 &lt;30 mg, 🟡 30-100 mg, 🟠 100-150 mg, 🔴 &gt;150 mg
+            </p>
+
+            <p style="margin-top: 15px;">
+                <strong>3. For vektet risikoscore:</strong>
+            </p>
             <table class="risk-table">
                 <thead>
                     <tr>
@@ -141,27 +170,32 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>&lt; 0.2</td>
+                        <td>&lt; 60</td>
                         <td>🟢 Lav risiko</td>
                         <td>Trygt ved normalt inntak</td>
                     </tr>
                     <tr>
-                        <td>0.2–0.4</td>
+                        <td>60–120</td>
                         <td>🟡 Moderat risiko</td>
                         <td>Begrens hyppighet</td>
                     </tr>
                     <tr>
-                        <td>0.4–0.6</td>
+                        <td>120–180</td>
                         <td>🟠 Høy risiko</td>
                         <td>Reduser porsjoner</td>
                     </tr>
                     <tr>
-                        <td>&gt; 0.6</td>
+                        <td>&gt; 180</td>
                         <td>🔴 Svært høy risiko</td>
                         <td>Unngå ved urinsyregikt</td>
                     </tr>
                 </tbody>
             </table>
+
+            <p style="margin-top: 20px;">
+                <strong>Justerbare grenser:</strong> Alle disse grenseverdiene kan tilpasses i Innstillinger (⚙️)
+                basert på individuelle behov og legens anbefalinger.
+            </p>
 
             <h3>Vitenskapelig grunnlag</h3>
             <p>
@@ -179,10 +213,17 @@
             </ul>
 
             <h2>Kilder</h2>
+
+            <h3>Datakilder for purininnhold</h3>
+            <ul>
+                <li><strong>USDA:</strong> United States Department of Agriculture - ODS-NIH/USDA Database for the Purine Content of Selected Foods, Release 1.0 (2024). www.ars.usda.gov</li>
+                <li><strong>JSTAGE:</strong> Kaneko, K., Aoyagi, Y., Fukuuchi, T., Inazawa, K., & Yamaoka, N. (2014). Total purine and purine base content of common foodstuffs for facilitating nutritional therapy for gout and hyperuricemia. Biological and Pharmaceutical Bulletin, 37(5), 709-721. https://www.jstage.jst.go.jp/article/bpb/37/5/37_b13-00967/_html/-char/en</li>
+            </ul>
+
+            <h3>Vitenskapelig grunnlag for vekting</h3>
             <ul>
                 <li>Sarwar, G. & Brulé, D. (1991). Assessment of uricogenic potential of purine bases and nucleosides in humans. Advances in Experimental Medicine and Biology, 309, 325–334.</li>
                 <li>Clifford, A. J. et al. (1976). Urinary excretion of purine derivatives in men fed purine bases, nucleosides, and nucleotides. The Journal of Nutrition, 106(3), 435–442.</li>
-                <li>ODS-NIH/USDA Purine Database, Release 2.0 (2024)</li>
             </ul>
 
             <a href="index.html" class="back-to-app">← Tilbake til appen</a>
