@@ -356,6 +356,13 @@ header h1 {
     margin: 8px 0;
 }
 
+.risk-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 0 8px 0;
+    opacity: 0.9;
+}
+
 .risk-card p {
     font-size: 13px;
     opacity: 0.8;
@@ -412,6 +419,7 @@ header h1 {
     padding: 16px;
     border-radius: 12px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .metric-card h4 {
@@ -425,6 +433,43 @@ header h1 {
     font-size: 28px;
     font-weight: 700;
     color: #1e293b;
+}
+
+/* Highlighted metric cards */
+.metric-card.highlight-low {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.metric-card.highlight-low h4,
+.metric-card.highlight-low .value {
+    color: #065f46;
+}
+
+.metric-card.highlight-moderate {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.metric-card.highlight-moderate h4,
+.metric-card.highlight-moderate .value {
+    color: #92400e;
+}
+
+.metric-card.highlight-high {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.metric-card.highlight-high h4,
+.metric-card.highlight-high .value {
+    color: #7c2d12;
+}
+
+.metric-card.highlight-very-high {
+    background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+}
+
+.metric-card.highlight-very-high h4,
+.metric-card.highlight-very-high .value {
+    color: #7f1d1d;
 }
 
 .metric-card .unit {

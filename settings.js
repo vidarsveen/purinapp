@@ -2,7 +2,6 @@
 class SettingsManager {
     constructor() {
         this.defaults = {
-            searchSortBy: 'purine', // 'purine' or 'risk'
             detailViewMode: 'serving' // 'serving' or 'per100g'
         };
         this.settings = this.loadSettings();
@@ -34,14 +33,6 @@ class SettingsManager {
         this.saveSettings();
     }
 
-    getSearchSortBy() {
-        return this.get('searchSortBy');
-    }
-
-    setSearchSortBy(value) {
-        this.set('searchSortBy', value);
-    }
-
     getDetailViewMode() {
         return this.get('detailViewMode');
     }
@@ -66,12 +57,6 @@ function showSettingsModal() {
         modal.classList.add('active');
 
         // Set radio buttons based on current settings
-        const searchSortBy = appSettings.getSearchSortBy();
-        document.querySelectorAll('input[name="searchSort"]').forEach(radio => {
-            radio.checked = radio.value === searchSortBy;
-            updateRadioSelection(radio.closest('.radio-option'), radio.checked);
-        });
-
         const detailViewMode = appSettings.getDetailViewMode();
         document.querySelectorAll('input[name="detailView"]').forEach(radio => {
             radio.checked = radio.value === detailViewMode;
@@ -92,15 +77,6 @@ function updateRadioSelection(optionElement, selected) {
         optionElement.classList.add('selected');
     } else {
         optionElement.classList.remove('selected');
-    }
-}
-
-function handleSearchSortChange(value) {
-    appSettings.setSearchSortBy(value);
-    // Re-render search results if there are any
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput && searchInput.value.trim().length >= 2) {
-        handleSearch(searchInput.value);
     }
 }
 
@@ -127,21 +103,6 @@ function setupSettingsListeners() {
     }
 
     // Radio button changes
-    document.querySelectorAll('input[name="searchSort"]').forEach(radio => {
-        radio.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                handleSearchSortChange(e.target.value);
-                // Update visual selection
-                document.querySelectorAll('.radio-option').forEach(opt => {
-                    const input = opt.querySelector('input[name="searchSort"]');
-                    if (input) {
-                        updateRadioSelection(opt, input.checked);
-                    }
-                });
-            }
-        });
-    });
-
     document.querySelectorAll('input[name="detailView"]').forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.checked) {

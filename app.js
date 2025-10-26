@@ -4,10 +4,13 @@ let translations = {};
 let allCategories = [];
 let currentCategory = '';
 let currentFoodIndex = null;
-let sortMode = 'total';
+let sortMode = 'total';  // For category view
+let searchSortMode = localStorage.getItem('searchSortMode') || 'total';  // For search view
+let detailSortMode = 'total';  // For detail view
 let navigationStack = ['homeScreen'];
 let globalMaxPurine = 0;
 let globalMaxRisk = 0;
+let globalMaxServing = 0;
 let pinnedFoods = []; // Max 5 food indices for comparison
 
 // Load data
@@ -29,15 +32,45 @@ async function loadData() {
         });
 
         translations = await translationsResponse.json();
-        allCategories = [...new Set(purineData.map(f => f.category))].sort();
+
+        // Custom category ordering: kjøtt first, fisk, innmat, rest alphabetically, alkohol last
+        const uniqueCategories = [...new Set(purineData.map(f => f.category))];
+        const categoryOrder = [
+            // Kjøtt categories first
+            'Okse - Kjøtt', 'Svin - Kjøtt', 'Fjærfe - Kjøtt', 'Lam, kalv og vilt', 'Annet Kjøtt', 'Pølser og pålegg',
+            // Then fish
+            'Fisk og skalldyr',
+            // Then organs
+            'Innmat',
+            // Alkohol will be added last
+        ];
+
+        // Add remaining categories alphabetically
+        const remainingCats = uniqueCategories
+            .filter(cat => !categoryOrder.includes(cat) && cat !== 'Alkohol')
+            .sort();
+
+        allCategories = [...categoryOrder.filter(cat => uniqueCategories.includes(cat)), ...remainingCats];
+
+        // Add Alkohol at the end if it exists
+        if (uniqueCategories.includes('Alkohol')) {
+            allCategories.push('Alkohol');
+        }
 
         // Calculate global max values for scaling
         globalMaxPurine = Math.max(...purineData.map(f => f.total_purines || 0));
         globalMaxRisk = Math.max(...purineData.map(f => calculateWeightedScore(f)));
+        globalMaxServing = Math.max(...purineData.map(f => scaleByServing(f.total_purines, f.serving)));
 
         console.log('Data loaded:', purineData.length, 'foods');
         console.log('Global max purine:', globalMaxPurine);
         console.log('Global max risk:', globalMaxRisk);
+        console.log('Global max serving:', globalMaxServing);
+
+        // Initialize search button states
+        document.querySelectorAll('#searchScreen .toggle-group .toggle-btn').forEach((btn, i) => {
+            btn.classList.toggle('active', (i === 0 && searchSortMode === 'total') || (i === 1 && searchSortMode === 'serving') || (i === 2 && searchSortMode === 'weighted'));
+        });
     } catch (error) {
         console.error('Error loading data:', error);
         alert('Kunne ikke laste data. Vennligst sjekk at JSON-filene finnes.');
@@ -138,9 +171,8 @@ function renderPinnedSection() {
         const risk = getRiskLevel(riskScore);
 
         // Get search sort setting for color
-        const searchSortBy = appSettings.getSearchSortBy();
         let colorLevel;
-        if (searchSortBy === 'purine') {
+        if (searchSortMode === 'total' || searchSortMode === 'serving') {
             colorLevel = getPurineLevelColor(food.total_purines || 0);
         } else {
             colorLevel = risk.level;
@@ -148,10 +180,17 @@ function renderPinnedSection() {
 
         // Determine bar width and labels based on sort mode (same as search results)
         let barWidth, statsHtml;
-        if (searchSortBy === 'purine') {
+        if (searchSortMode === 'total') {
             barWidth = (food.total_purines || 0) / globalMaxPurine * 100;
             statsHtml = `
                 <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
+                <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+            `;
+        } else if (searchSortMode === 'serving') {
+            const servingAmount = scaleByServing(food.total_purines, food.serving);
+            barWidth = servingAmount / globalMaxServing * 100;
+            statsHtml = `
+                <span><strong>${servingAmount.toFixed(1)}</strong> mg/porsjon (${food.serving}g)</span>
                 <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
             `;
         } else {
@@ -251,6 +290,13 @@ function showCategoryFoods(category) {
 
 function showFoodDetail(index) {
     currentFoodIndex = index;
+    // Inherit sort mode from current context
+    const currentScreen = document.querySelector('.screen.active');
+    if (currentScreen && currentScreen.id === 'searchScreen') {
+        detailSortMode = searchSortMode;
+    } else if (currentScreen && currentScreen.id === 'categoryFoodsScreen') {
+        detailSortMode = sortMode;
+    }
     showScreen('foodDetailScreen');
     const food = purineData[index];
     document.getElementById('headerTitle').textContent = food.name;
@@ -286,13 +332,40 @@ function renderCategorySwitcher() {
     document.getElementById('categorySwitcher').innerHTML = html;
 }
 
-// Set sort mode
+// Set sort mode for category view
 function setSortMode(mode) {
     sortMode = mode;
     document.querySelectorAll('#categoryFoodsScreen .toggle-group .toggle-btn').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0 && mode === 'total') || (i === 1 && mode === 'weighted'));
+        btn.classList.toggle('active', (i === 0 && mode === 'total') || (i === 1 && mode === 'serving') || (i === 2 && mode === 'weighted'));
     });
     renderCategoryFoods();
+}
+
+// Set sort mode for search view
+function setSearchSortMode(mode) {
+    searchSortMode = mode;
+    localStorage.setItem('searchSortMode', mode);
+
+    // Update button states
+    document.querySelectorAll('#searchScreen .toggle-group .toggle-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && mode === 'total') || (i === 1 && mode === 'serving') || (i === 2 && mode === 'weighted'));
+    });
+
+    // Re-render search results if there are any
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput && searchInput.value.trim().length >= 2) {
+        handleSearch(searchInput.value);
+    }
+}
+
+// Set sort mode for detail view
+function setDetailSortMode(mode) {
+    detailSortMode = mode;
+    // Re-render current food detail
+    if (currentFoodIndex !== null) {
+        const food = purineData[currentFoodIndex];
+        renderFoodDetail(food);
+    }
 }
 
 // Render category foods with visual bars - GLOBAL SCALE
@@ -304,8 +377,10 @@ function renderCategoryFoods() {
     // Sort based on mode
     if (sortMode === 'total') {
         foods.sort((a, b) => (b.total_purines || 0) - (a.total_purines || 0));
-    } else {
+    } else if (sortMode === 'weighted') {
         foods.sort((a, b) => calculateWeightedScore(b) - calculateWeightedScore(a));
+    } else if (sortMode === 'serving') {
+        foods.sort((a, b) => scaleByServing(b.total_purines, b.serving) - scaleByServing(a.total_purines, a.serving));
     }
 
     const html = foods.map(food => {
@@ -324,11 +399,21 @@ function renderCategoryFoods() {
             else if (food.total_purines < 150) barLevel = 'moderate';
             else if (food.total_purines < 200) barLevel = 'high';
             else barLevel = 'very-high';
-        } else {
+        } else if (sortMode === 'weighted') {
             // Sorting by weighted risk - use GLOBAL scale
             displayValue = `Risiko: <strong>${weightedScore.toFixed(1)}</strong>`;
             barWidth = (weightedScore / globalMaxRisk * 100);
             barLevel = risk.level;
+        } else if (sortMode === 'serving') {
+            // Sorting by per serving - use GLOBAL scale
+            const servingAmount = scaleByServing(food.total_purines, food.serving);
+            displayValue = `<strong>${servingAmount.toFixed(1)}</strong> mg/porsjon (${food.serving}g)`;
+            barWidth = (servingAmount / globalMaxServing * 100);
+            // Color based on serving amount ranges (similar to total but scaled)
+            if (servingAmount < 50) barLevel = 'low';
+            else if (servingAmount < 150) barLevel = 'moderate';
+            else if (servingAmount < 200) barLevel = 'high';
+            else barLevel = 'very-high';
         }
 
         const pinned = isPinned(food.index);
@@ -386,16 +471,19 @@ function handleSearch(query) {
         return;
     }
 
-    // Sort based on settings
-    const searchSortBy = appSettings.getSearchSortBy();
-    if (searchSortBy === 'purine') {
+    // Sort based on searchSortMode
+    if (searchSortMode === 'total') {
         results.sort((a, b) => (b.total_purines || 0) - (a.total_purines || 0));
-    } else {
+    } else if (searchSortMode === 'serving') {
+        results.sort((a, b) => scaleByServing(b.total_purines, b.serving) - scaleByServing(a.total_purines, a.serving));
+    } else if (searchSortMode === 'weighted') {
         results.sort((a, b) => calculateWeightedScore(b) - calculateWeightedScore(a));
     }
 
-    const sortInfo = searchSortBy === 'purine'
-        ? 'Treff sortert etter purinnivå'
+    const sortInfo = searchSortMode === 'total'
+        ? 'Treff sortert etter per 100g'
+        : searchSortMode === 'serving'
+        ? 'Treff sortert etter per porsjon'
         : 'Treff sortert etter risiko';
 
     const html = `
@@ -408,8 +496,8 @@ function handleSearch(query) {
 
             // Determine color based on what's being sorted/displayed
             let colorLevel;
-            if (searchSortBy === 'purine') {
-                // When sorting by purine, color based on purine amount
+            if (searchSortMode === 'total' || searchSortMode === 'serving') {
+                // When sorting by purine (per 100g or serving), color based on purine amount
                 colorLevel = getPurineLevelColor(food.total_purines || 0);
             } else {
                 // When sorting by risk, color based on risk level
@@ -420,15 +508,23 @@ function handleSearch(query) {
 
             // Determine bar width and labels based on sort mode
             let barWidth, statsHtml;
-            if (searchSortBy === 'purine') {
-                // When sorting by purine, show purine bar and emphasize mg/100g
+            if (searchSortMode === 'total') {
+                // When sorting by per 100g
                 barWidth = (food.total_purines || 0) / globalMaxPurine * 100;
                 statsHtml = `
                     <span><strong>${(food.total_purines || 0).toFixed(1)}</strong> mg/100g</span>
                     <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
                 `;
+            } else if (searchSortMode === 'serving') {
+                // When sorting by per serving
+                const servingAmount = scaleByServing(food.total_purines, food.serving);
+                barWidth = servingAmount / globalMaxServing * 100;
+                statsHtml = `
+                    <span><strong>${servingAmount.toFixed(1)}</strong> mg/porsjon (${food.serving}g)</span>
+                    <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
+                `;
             } else {
-                // When sorting by risk, show risk bar and emphasize risiko
+                // When sorting by risk
                 barWidth = weightedScore / globalMaxRisk * 100;
                 statsHtml = `
                     <span>Risiko: <strong>${weightedScore.toFixed(1)}</strong></span>
@@ -476,14 +572,38 @@ function renderFoodDetail(food) {
     const totalPerServing = scaleByServing(food.total_purines, food.serving);
     const weightedPerServing = scaleByServing(weightedScore, food.serving);
 
-    // Main metric for risk card based on view mode
-    let mainMetricValue, mainMetricLabel;
-    if (isServingView) {
-        mainMetricValue = totalPerServing.toFixed(1);
-        mainMetricLabel = `${mainMetricValue} mg per porsjon`;
-    } else {
+    // Main metric for risk card based on detailSortMode
+    let mainMetricValue, mainMetricLabel, riskCardColor, riskCardTitle;
+    if (detailSortMode === 'total') {
+        // Per 100g
         mainMetricValue = (food.total_purines || 0).toFixed(1);
         mainMetricLabel = `${mainMetricValue} mg per 100g`;
+        riskCardColor = getPurineLevelColor(food.total_purines || 0);
+        const purineLevelText = {
+            'low': 'Lavt purininnhold',
+            'moderate': 'Moderat purininnhold',
+            'high': 'Høyt purininnhold',
+            'very-high': 'Svært høyt purininnhold'
+        };
+        riskCardTitle = purineLevelText[riskCardColor];
+    } else if (detailSortMode === 'serving') {
+        // Per porsjon
+        mainMetricValue = totalPerServing.toFixed(1);
+        mainMetricLabel = `${mainMetricValue} mg per porsjon`;
+        riskCardColor = getPurineLevelColor(totalPerServing);
+        const purineLevelText = {
+            'low': 'Lavt purininnhold',
+            'moderate': 'Moderat purininnhold',
+            'high': 'Høyt purininnhold',
+            'very-high': 'Svært høyt purininnhold'
+        };
+        riskCardTitle = purineLevelText[riskCardColor];
+    } else {
+        // Weighted (risiko)
+        mainMetricValue = weightedScore.toFixed(1);
+        mainMetricLabel = `Risikoscore: ${mainMetricValue}`;
+        riskCardColor = risk.level;
+        riskCardTitle = risk.text;
     }
 
     // Calculate max for bar chart scaling
@@ -501,6 +621,12 @@ function renderFoodDetail(food) {
     // Explanation text
     const explanationText = `En porsjon av denne matvaren er typisk ${food.serving} gram. Sammensetningen av de 4 underkategoriene (Hypoxantin, Adenin, Guanin og Xantin) gjør at denne har en vektet risikoscore på ${weightedScore.toFixed(1)}.`;
 
+    // Determine which metric card to highlight
+    let highlightPer100gTotal = detailSortMode === 'total';
+    let highlightPer100gWeighted = detailSortMode === 'weighted';
+    let highlightPerServingTotal = detailSortMode === 'serving';
+    let highlightPerServingWeighted = false; // Not used for now
+
     const html = `
         <div class="food-detail">
             <div class="food-header">
@@ -509,9 +635,19 @@ function renderFoodDetail(food) {
                 <p class="serving-info">📏 Porsjon: ${food.serving} gram</p>
             </div>
 
-            <div class="risk-card ${risk.level}">
-                <h3>${risk.text}</h3>
-                <div class="risk-score">${displayScore.toFixed(1)}</div>
+            <div class="settings-bar">
+                <label>Vis:</label>
+                <div class="toggle-group">
+                    <button class="toggle-btn ${detailSortMode === 'total' ? 'active' : ''}" onclick="setDetailSortMode('total')">Per 100g</button>
+                    <button class="toggle-btn ${detailSortMode === 'serving' ? 'active' : ''}" onclick="setDetailSortMode('serving')">Per porsjon</button>
+                    <button class="toggle-btn ${detailSortMode === 'weighted' ? 'active' : ''}" onclick="setDetailSortMode('weighted')">Risiko (vektet)</button>
+                </div>
+            </div>
+
+            <div class="risk-card ${riskCardColor}">
+                <h3>${riskCardTitle}</h3>
+                <div class="risk-score">${mainMetricValue}</div>
+                <p class="risk-subtitle">${mainMetricLabel}</p>
 
                 <!-- Compact purine distribution -->
                 <div class="risk-bars">
@@ -529,35 +665,33 @@ function renderFoodDetail(food) {
                     </div>
                 </div>
 
-                <p>${risk.desc}</p>
+                <p>${detailSortMode === 'weighted' ? risk.desc : 'Purininnhold i matvaren'}</p>
             </div>
 
             <div class="info-box">
                 ${explanationText}
             </div>
 
-            <div class="section-title">Totalt purininnhold</div>
+            <div class="section-title">Per 100 g</div>
             <div class="metric-row">
-                <div class="metric-card">
-                    <h4>Per 100g</h4>
-                    <div class="value">${(food.total_purines || 0).toFixed(1)}</div>
-                    <div class="unit">mg</div>
+                <div class="metric-card ${highlightPer100gTotal ? 'highlight-' + risk.level : ''}">
+                    <h4>Total purin</h4>
+                    <div class="value">${(food.total_purines || 0).toFixed(1)} mg</div>
                 </div>
-                <div class="metric-card">
-                    <h4>Per porsjon (${food.serving}g)</h4>
-                    <div class="value">${totalPerServing.toFixed(1)}</div>
-                    <div class="unit">mg</div>
+                <div class="metric-card ${highlightPer100gWeighted ? 'highlight-' + risk.level : ''}">
+                    <h4>Vektet risiko</h4>
+                    <div class="value">${weightedScore.toFixed(1)}</div>
                 </div>
             </div>
 
-            <div class="section-title">Risiko (vektet score)</div>
+            <div class="section-title">Per porsjon</div>
             <div class="metric-row">
-                <div class="metric-card">
-                    <h4>Per 100g</h4>
-                    <div class="value">${weightedScore.toFixed(1)}</div>
+                <div class="metric-card ${highlightPerServingTotal ? 'highlight-' + risk.level : ''}">
+                    <h4>Total purin</h4>
+                    <div class="value">${totalPerServing.toFixed(1)} mg</div>
                 </div>
-                <div class="metric-card">
-                    <h4>Per porsjon (${food.serving}g)</h4>
+                <div class="metric-card ${highlightPerServingWeighted ? 'highlight-' + risk.level : ''}">
+                    <h4>Vektet risiko</h4>
                     <div class="value">${weightedPerServing.toFixed(1)}</div>
                 </div>
             </div>

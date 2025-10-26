@@ -25,6 +25,16 @@
             <!-- Search Screen -->
             <div id="searchScreen" class="screen">
                 <input type="text" class="search-box" id="searchInput" placeholder="Søk etter matvare..." oninput="handleSearch(this.value)">
+
+                <div class="settings-bar">
+                    <label>Sorter etter:</label>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" onclick="setSearchSortMode('total')">Per 100g</button>
+                        <button class="toggle-btn" onclick="setSearchSortMode('serving')">Per porsjon</button>
+                        <button class="toggle-btn" onclick="setSearchSortMode('weighted')">Risiko (vektet)</button>
+                    </div>
+                </div>
+
                 <div id="searchResults"></div>
             </div>
 
@@ -41,7 +51,8 @@
                 <div class="settings-bar">
                     <label>Sorter etter:</label>
                     <div class="toggle-group">
-                        <button class="toggle-btn active" onclick="setSortMode('total')">Totalt purin</button>
+                        <button class="toggle-btn active" onclick="setSortMode('total')">Per 100g</button>
+                        <button class="toggle-btn" onclick="setSortMode('serving')">Per porsjon</button>
                         <button class="toggle-btn" onclick="setSortMode('weighted')">Risiko (vektet)</button>
                     </div>
                 </div>
@@ -61,21 +72,6 @@
                 <button class="modal-close" onclick="closeSettingsModal()">×</button>
             </div>
             <div class="modal-body">
-                <div class="setting-group">
-                    <label class="setting-label">Søkeresultater sortert etter</label>
-                    <p class="setting-description">Velg hvordan søkeresultatene skal sorteres</p>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="searchSortPurine" name="searchSort" value="purine" checked>
-                            <label for="searchSortPurine">Purinnivå (mg/100g)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="searchSortRisk" name="searchSort" value="risk">
-                            <label for="searchSortRisk">Risiko (vektet score)</label>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="setting-group">
                     <label class="setting-label">Detaljvisning - standard visning</label>
                     <p class="setting-description">Velg om verdier skal vises per porsjon eller per 100g</p>
